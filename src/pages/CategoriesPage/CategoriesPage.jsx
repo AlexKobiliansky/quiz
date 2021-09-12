@@ -1,10 +1,13 @@
 import React from 'react';
+
 import {Typography} from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import styles from './Categories.module.sass';
-import Category from '../../components/Category/Category';
 
-let categories = [
+import Category from '../../components/Category/Category';
+import styles from './CategoriesPage.module.sass';
+
+
+let categoriesPage = [
   {
     "id": 1,
     "title": "JavaScript",
@@ -62,7 +65,7 @@ const Categories = () => {
       </Typography>
 
       <div className={styles.categoriesWrap}>
-        {categories.map(cat => <Category key={cat.id} id={cat.id} title={cat.title} img={cat.img} />)}
+        {categoriesPage.map(cat => <Category key={cat.id} {...cat} />)}
       </div>
     </div>
   );

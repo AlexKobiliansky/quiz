@@ -1,7 +1,11 @@
-import Header from './components/Header/Header';
+import React from 'react';
+
 import {Route, Switch} from 'react-router-dom';
+
+import Header from './components/Header/Header';
 import Main from './components/Main/Main'
-import Categories from './pages/Categories/Categories';
+import Categories from './pages/CategoriesPage/CategoriesPage';
+import CategoryPage from './pages/CategoryPage/CategoryPage';
 
 function App() {
   return (
@@ -12,6 +16,7 @@ function App() {
           <Switch>
             <Route path="/" component={Main} exact/>
             <Route path="/categories" component={Categories} exact/>
+            <Route path="/categories/:id" component={CategoryPage} exact/>
           </Switch>
         </div>
       </div>
