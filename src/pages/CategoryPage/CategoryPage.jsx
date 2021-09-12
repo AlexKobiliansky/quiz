@@ -1,8 +1,7 @@
 import React from 'react';
 
-import {Button, Typography, withStyles} from '@material-ui/core';
+import {Button, Typography, withStyles, makeStyles} from '@material-ui/core';
 import {purple} from '@material-ui/core/colors';
-import {makeStyles} from '@material-ui/core/styles';
 import ProgressBar from "@ramonak/react-progress-bar";
 
 import QuestionBlock from '../../components/QuestionBlock/QuestionBlock';

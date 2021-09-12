@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 import imagePlaceholder from '../../assets/images/image-placeholder.jpg';
 import styles from './Category.module.sass';
 
-const Category = ({title, img, id}) => {
+const Category = ({title, img, id, totalQuestions}) => {
   let imgSrc = img ? img : imagePlaceholder
 
   return (
@@ -14,7 +14,7 @@ const Category = ({title, img, id}) => {
         <img src={imgSrc} alt={title}/>
         <div className={styles.content}>
           <div className={styles.title}>{title}</div>
-          <div className={styles.questions}>25 Questions</div>
+          <div className={styles.questions}>{totalQuestions} Questions</div>
         </div>
       </div>
     </Link>

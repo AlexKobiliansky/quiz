@@ -1,0 +1,3 @@
+// Category types
+export const SET_LOADING_CATEGORY = 'SET_LOADING_CATEGORY';
+export const SET_CATEGORIES = 'SET_CATEGORIES';

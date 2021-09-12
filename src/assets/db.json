@@ -3,17 +3,50 @@
     {
       "id": 1,
       "title": "JavaScript",
-      "img": ""
+      "img": "https://res.cloudinary.com/do1zs5utw/image/upload/v1631222510/javascript_s199nx.png",
+      "totalQuestions": 25
     },
     {
       "id": 2,
       "title": "PHP",
-      "img": ""
+      "img": "https://res.cloudinary.com/do1zs5utw/image/upload/v1631222510/php_tenaqz.jpg",
+      "totalQuestions": 10
     },
     {
       "id": 3,
       "title": "HTML",
-      "img": ""
+      "img": "https://res.cloudinary.com/do1zs5utw/image/upload/v1631222510/html_hnl59u.jpg",
+      "totalQuestions": 8
+    },
+    {
+      "id": 4,
+      "title": "Linux",
+      "img": "",
+      "totalQuestions": 10
+    },
+    {
+      "id": 5,
+      "title": "Docker",
+      "img": "",
+      "totalQuestions": 24
+    },
+    {
+      "id": 6,
+      "title": "MySQL",
+      "img": "",
+      "totalQuestions": 25
+    },
+    {
+      "id": 7,
+      "title": "Kubernetes",
+      "img": "",
+      "totalQuestions": 25
+    },
+    {
+      "id": 8,
+      "title": "Bash",
+      "img": "",
+      "totalQuestions": 35
     }
   ]
 }

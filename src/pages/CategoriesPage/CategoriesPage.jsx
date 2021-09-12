@@ -1,54 +1,13 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
 import {Typography} from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 
 import Category from '../../components/Category/Category';
 import styles from './CategoriesPage.module.sass';
-
-
-let categoriesPage = [
-  {
-    "id": 1,
-    "title": "JavaScript",
-    "img": "https://res.cloudinary.com/do1zs5utw/image/upload/v1631222510/javascript_s199nx.png"
-  },
-  {
-    "id": 2,
-    "title": "PHP",
-    "img": "https://res.cloudinary.com/do1zs5utw/image/upload/v1631222510/php_tenaqz.jpg"
-  },
-  {
-    "id": 3,
-    "title": "HTML",
-    "img": "https://res.cloudinary.com/do1zs5utw/image/upload/v1631222510/html_hnl59u.jpg"
-  },
-  {
-    "id": 4,
-    "title": "Linux",
-    "img": ""
-  },
-  {
-    "id": 5,
-    "title": "Docker",
-    "img": ""
-  },
-  {
-    "id": 6,
-    "title": "MySQL",
-    "img": ""
-  },
-  {
-    "id": 7,
-    "title": "Kubernetes",
-    "img": ""
-  },
-  {
-    "id": 8,
-    "title": "Bash",
-    "img": ""
-  }
-]
+import {useDispatch, useSelector} from 'react-redux';
+import {fetchCategoriesAC} from '../../redux/actions/category';
+import {Skeleton} from '@material-ui/lab';
 
 const useStyles = makeStyles({
   root: {
@@ -56,8 +15,19 @@ const useStyles = makeStyles({
   },
 });
 
-const Categories = () => {
+const CategoriesPage = () => {
   const classes = useStyles();
+  const dispatch = useDispatch();
+  const {isLoading, categories} = useSelector(({category}) => category);
+
+  useEffect(() => {
+    if (!categories.length) {
+      dispatch(fetchCategoriesAC());
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+
   return (
     <div>
       <Typography variant="h2" component="h1" align="center" gutterBottom className={classes.root}>
@@ -65,10 +35,18 @@ const Categories = () => {
       </Typography>
 
       <div className={styles.categoriesWrap}>
-        {categoriesPage.map(cat => <Category key={cat.id} {...cat} />)}
+        {
+          (isLoading ? Array.from(new Array(8)) : categories).map((cat, index) => (
+            cat ? (
+              <Category key={cat.id} {...cat} />
+            ) : (
+              <Skeleton variant="rect" width='100%' height={200} key={index}/>
+            )
+          ))
+        }
       </div>
     </div>
   );
 };
 
-export default Categories;
+export default CategoriesPage;
