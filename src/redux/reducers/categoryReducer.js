@@ -1,4 +1,4 @@
-import {SET_LOADING_CATEGORY, SET_CATEGORIES} from '../types';
+import {SET_LOADING_CATEGORY, SET_CATEGORIES, SET_CURRENT_CATEGORY} from '../types';
 
 const defaultState = {
   isLoading: false,
@@ -17,6 +17,12 @@ let categoryReducer = (state = defaultState, action) => {
       return {
         ...state,
         categories: action.payload,
+        isLoading: false
+      }
+    case SET_CURRENT_CATEGORY:
+      return {
+        ...state,
+        currentCategory: action.payload,
         isLoading: false
       }
     default:

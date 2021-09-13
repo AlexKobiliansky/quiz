@@ -48,5 +48,467 @@
       "img": "",
       "totalQuestions": 35
     }
+  ],
+  "questions": [
+    {
+      "id": 509,
+      "question": "<TD> … </TD> tag is used for ________",
+      "answers": {
+        "answer_a": "Table heading",
+        "answer_b": "none of the above",
+        "answer_c": "Table row",
+        "answer_d": "Table Records",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": "false",
+      "correct_answers": {
+        "answer_a_correct": "false",
+        "answer_b_correct": "false",
+        "answer_c_correct": "false",
+        "answer_d_correct": "true",
+        "answer_e_correct": "false",
+        "answer_f_correct": "false"
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 3
+    },
+    {
+      "id": 535,
+      "question": "Some tags enclose the text. Those tags are known as",
+      "answers": {
+        "answer_a": "Couple tags",
+        "answer_b": "Pair tags",
+        "answer_c": "Double tags",
+        "answer_d": "Single tags",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": "false",
+      "correct_answers": {
+        "answer_a_correct": "false",
+        "answer_b_correct": "true",
+        "answer_c_correct": "false",
+        "answer_d_correct": "false",
+        "answer_e_correct": "false",
+        "answer_f_correct": "false"
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 3
+    },
+    {
+      "id": 478,
+      "question": "HTML are web pages read and rendered by",
+      "answers": {
+        "answer_a": "Compiler",
+        "answer_b": "Interpreter",
+        "answer_c": "Web Browser",
+        "answer_d": "Server",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": "false",
+      "correct_answers": {
+        "answer_a_correct": "false",
+        "answer_b_correct": "false",
+        "answer_c_correct": "true",
+        "answer_d_correct": "false",
+        "answer_e_correct": "false",
+        "answer_f_correct": "false"
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 3
+    },
+    {
+      "id": 456,
+      "question": "Which attribute sets the text direction as related to lang attribute.",
+      "answers": {
+        "answer_a": "Sub",
+        "answer_b": "Dir",
+        "answer_c": "Ds",
+        "answer_d": "Lang",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": "false",
+      "correct_answers": {
+        "answer_a_correct": "false",
+        "answer_b_correct": "false",
+        "answer_c_correct": "false",
+        "answer_d_correct": "true",
+        "answer_e_correct": "false",
+        "answer_f_correct": "false"
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 3
+    },
+    {
+      "id": 488,
+      "question": "HTML Uses",
+      "answers": {
+        "answer_a": "Fixed Tags Defined By The Language",
+        "answer_b": "Pre-specified Tags",
+        "answer_c": "Tags Only For Linking",
+        "answer_d": "User Defined Tags",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": "false",
+      "correct_answers": {
+        "answer_a_correct": "true",
+        "answer_b_correct": "false",
+        "answer_c_correct": "false",
+        "answer_d_correct": "false",
+        "answer_e_correct": "false",
+        "answer_f_correct": "false"
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 3
+    },
+    {
+      "id": 446,
+      "question": "All HTML Tags must be enclosed In?",
+      "answers": {
+        "answer_a": "? And !",
+        "answer_b": "# And #",
+        "answer_c": "{ And }",
+        "answer_d": "< And >",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": "false",
+      "correct_answers": {
+        "answer_a_correct": "false",
+        "answer_b_correct": "false",
+        "answer_c_correct": "false",
+        "answer_d_correct": "true",
+        "answer_e_correct": "false",
+        "answer_f_correct": "false"
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 3
+    },
+    {
+      "id": 482,
+      "question": "How can you create an E-mail link?",
+      "answers": {
+        "answer_a": "<a Href=\"a@b\">",
+        "answer_b": "<mail Href=\"a@b\">",
+        "answer_c": "<a Href=\"mailto:a@b.com\">",
+        "answer_d": "<mail>a@b</mail>",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": "false",
+      "correct_answers": {
+        "answer_a_correct": "false",
+        "answer_b_correct": "false",
+        "answer_c_correct": "true",
+        "answer_d_correct": "false",
+        "answer_e_correct": "false",
+        "answer_f_correct": "false"
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 3
+    },
+    {
+      "id": 480,
+      "question": "Which of the following attribute triggers event when an element gets user Input?",
+      "answers": {
+        "answer_a": "Ondata",
+        "answer_b": "Onloadeddata",
+        "answer_c": "Oninput",
+        "answer_d": "Onhaschange",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": "false",
+      "correct_answers": {
+        "answer_a_correct": "false",
+        "answer_b_correct": "false",
+        "answer_c_correct": "true",
+        "answer_d_correct": "false",
+        "answer_e_correct": "false",
+        "answer_f_correct": "false"
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 3
+    },
+    {
+      "id": 459,
+      "question": "Which of the following will create the so called Hamburger Menu?",
+      "answers": {
+        "answer_a": "Icon-prev",
+        "answer_b": "Icon-next",
+        "answer_c": "Img-circle",
+        "answer_d": "Icon-bar",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": "false",
+      "correct_answers": {
+        "answer_a_correct": "false",
+        "answer_b_correct": "false",
+        "answer_c_correct": "false",
+        "answer_d_correct": "true",
+        "answer_e_correct": "false",
+        "answer_f_correct": "false"
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 3
+    },
+    {
+      "id": 532,
+      "question": "There are ____ different heading tags in HTML",
+      "answers": {
+        "answer_a": "4",
+        "answer_b": "7",
+        "answer_c": "6",
+        "answer_d": "5",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": "false",
+      "correct_answers": {
+        "answer_a_correct": "false",
+        "answer_b_correct": "false",
+        "answer_c_correct": "true",
+        "answer_d_correct": "false",
+        "answer_e_correct": "false",
+        "answer_f_correct": "false"
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 3
+    },
+    {
+      "id": 523,
+      "question": "Which attribute can be used with BODY tag to set background color green?",
+      "answers": {
+        "answer_a": "background=\"green\"",
+        "answer_b": "bgcolor=\"green\"",
+        "answer_c": "vlink=\"green\"",
+        "answer_d": "None of above",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": "false",
+      "correct_answers": {
+        "answer_a_correct": "false",
+        "answer_b_correct": "true",
+        "answer_c_correct": "false",
+        "answer_d_correct": "false",
+        "answer_e_correct": "false",
+        "answer_f_correct": "false"
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 3
+    },
+    {
+      "id": 465,
+      "question": "Which of the following encoding an XML parser assumes ?",
+      "answers": {
+        "answer_a": "UTF-16",
+        "answer_b": "UTF-32",
+        "answer_c": "UTF-8",
+        "answer_d": "UTF-64",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": "true",
+      "correct_answers": {
+        "answer_a_correct": "false",
+        "answer_b_correct": "true",
+        "answer_c_correct": "true",
+        "answer_d_correct": "false",
+        "answer_e_correct": "false",
+        "answer_f_correct": "false"
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 3
+    },
+    {
+      "id": 539,
+      "question": "How can we define a Video Tag in HTML 5?",
+      "answers": {
+        "answer_a": "<video src \"URL\"></video>",
+        "answer_b": "<video src=\"URL\"></video>",
+        "answer_c": "<video></video>",
+        "answer_d": "<video src:\"URL\"></video>",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": "false",
+      "correct_answers": {
+        "answer_a_correct": "false",
+        "answer_b_correct": "true",
+        "answer_c_correct": "false",
+        "answer_d_correct": "false",
+        "answer_e_correct": "false",
+        "answer_f_correct": "false"
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 3
+    },
+    {
+      "id": 469,
+      "question": "The __________ Element represents a span of text that is isolated from it's surroundings for the purposes of bidirectional text formatting",
+      "answers": {
+        "answer_a": "B",
+        "answer_b": "Base",
+        "answer_c": "Bdo",
+        "answer_d": "Bdi",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": "false",
+      "correct_answers": {
+        "answer_a_correct": "false",
+        "answer_b_correct": "false",
+        "answer_c_correct": "false",
+        "answer_d_correct": "true",
+        "answer_e_correct": "false",
+        "answer_f_correct": "false"
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 3
+    },
+    {
+      "id": 466,
+      "question": "Which of the following will provide additional Information about something?",
+      "answers": {
+        "answer_a": "Jumbotron",
+        "answer_b": "Item",
+        "answer_c": "Label-danger",
+        "answer_d": "Label",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": "false",
+      "correct_answers": {
+        "answer_a_correct": "false",
+        "answer_b_correct": "true",
+        "answer_c_correct": "false",
+        "answer_d_correct": "false",
+        "answer_e_correct": "false",
+        "answer_f_correct": "false"
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 3
+    },
+    {
+      "id": 543,
+      "question": "What is cite tag in HTML5?",
+      "answers": {
+        "answer_a": "<cite title\"value\">Some Text Here</cite>",
+        "answer_b": "<cite title:\"value\">Some Text Here</cite>",
+        "answer_c": "<cite title=\"value\">Some Text Here</cite>",
+        "answer_d": null,
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": "false",
+      "correct_answers": {
+        "answer_a_correct": "false",
+        "answer_b_correct": "false",
+        "answer_c_correct": "true",
+        "answer_d_correct": "false",
+        "answer_e_correct": "false",
+        "answer_f_correct": "false"
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 3
+    },
+    {
+      "id": 524,
+      "question": "Which attribute is used with an img tag to display the text if image could not load in browser?",
+      "answers": {
+        "answer_a": "description",
+        "answer_b": "id",
+        "answer_c": "alt",
+        "answer_d": "name",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": "false",
+      "correct_answers": {
+        "answer_a_correct": "false",
+        "answer_b_correct": "false",
+        "answer_c_correct": "true",
+        "answer_d_correct": "false",
+        "answer_e_correct": "false",
+        "answer_f_correct": "false"
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 3
+    },
+    {
+      "id": 500,
+      "question": "Which of the following attribute triggers an event when media data is loaded?",
+      "answers": {
+        "answer_a": "onhaschange",
+        "answer_b": "onloadeddata",
+        "answer_c": "onload",
+        "answer_d": "oninpu",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": "false",
+      "correct_answers": {
+        "answer_a_correct": "false",
+        "answer_b_correct": "true",
+        "answer_c_correct": "false",
+        "answer_d_correct": "false",
+        "answer_e_correct": "false",
+        "answer_f_correct": "false"
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 3
+    },
+    {
+      "id": 541,
+      "question": "What is the use of Scalable Vector Graphics (SVG) in HTML5?",
+      "answers": {
+        "answer_a": "Scalable Vector Graphics (SVG) is the part of the vector-based family of graphics. There are various forms of Raster-based graphics available that stores the color definition for each pixel in an array of data.",
+        "answer_b": "Scalable Vector Graphics (SVG) is the part of the colored-based family of graphics. There are various forms of Raster-based graphics available that stores the design definition for each pixel in an array of data.",
+        "answer_c": null,
+        "answer_d": null,
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": "false",
+      "correct_answers": {
+        "answer_a_correct": "true",
+        "answer_b_correct": "false",
+        "answer_c_correct": "false",
+        "answer_d_correct": "false",
+        "answer_e_correct": "false",
+        "answer_f_correct": "false"
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 3
+    },
+    {
+      "id": 511,
+      "question": "Which tag is used to display the large font size?",
+      "answers": {
+        "answer_a": "<LARGE></LARGE>",
+        "answer_b": "<FONT></FONT>",
+        "answer_c": "< SIZE ></SIZE>",
+        "answer_d": "<BIG></BIG>",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": "false",
+      "correct_answers": {
+        "answer_a_correct": "false",
+        "answer_b_correct": "false",
+        "answer_c_correct": "false",
+        "answer_d_correct": "true",
+        "answer_e_correct": "false",
+        "answer_f_correct": "false"
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 3
+    }
   ]
 }

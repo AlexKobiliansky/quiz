@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-import {Checkbox, FormControlLabel} from '@material-ui/core';
+import {Checkbox, FormControlLabel, Radio, RadioGroup} from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 import styles from './QuestionBlock.module.sass';
@@ -20,9 +20,15 @@ const QuestionBlock = () => {
     checkedD: true,
   });
 
+  const [radioValue, setRadioValue] = React.useState('');
+
   const handleChange = (event) => {
     setState({ ...state, [event.target.name]: event.target.checked });
   };
+
+  const handleRadioChange = e => {
+    setRadioValue(e.target.value);
+  }
 
 
   return (
@@ -81,6 +87,11 @@ const QuestionBlock = () => {
             label="Primary"
             className={classes.root}
           />
+
+          <RadioGroup aria-label="gender" name="gender1" value={radioValue} onChange={handleRadioChange}>
+            <FormControlLabel value="female" control={<Radio color="primary" />} label="Female" />
+            <FormControlLabel value="male" control={<Radio color="primary" />} label="Male" />
+          </RadioGroup>
         </div>
       </div>
     </div>

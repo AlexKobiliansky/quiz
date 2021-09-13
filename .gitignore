@@ -25,3 +25,6 @@ yarn-error.log*
 /.idea
 
 /src/assets/db-backup.json
+/src/assets/html.json
+/src/assets/js.json
+/src/assets/php.json
