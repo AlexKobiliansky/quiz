@@ -1,4 +1,4 @@
-import {SET_LOADING_QUESTIONS, SET_QUESTIONS} from '../types';
+import {SET_CURRENT_QUESTION, SET_LOADING_QUESTIONS, SET_QUESTIONS, SUBMIT_ANSWER_ON_QUESTION} from '../types';
 
 
 const defaultState = {
@@ -15,13 +15,26 @@ let questionsReducer = (state = defaultState, action) => {
         ...state,
         isLoading: true
       }
-    case SET_QUESTIONS: {
+    case SET_QUESTIONS:
       return {
         ...state,
         questions: action.payload,
         isLoading: false
       }
-    }
+    case SET_CURRENT_QUESTION:
+      return {
+        ...state,
+        currentQuestion: action.payload
+      }
+    case SUBMIT_ANSWER_ON_QUESTION:
+      return {
+        ...state,
+        questions: state.questions.filter(item => item.id !== action.payload.id),
+        answeredQuestions: [
+          ...state.answeredQuestions,
+          action.payload
+        ]
+      }
     default:
       return state
   }

@@ -1,8 +1,6 @@
-import React, {useLayoutEffect, useState} from 'react';
+import React, {useEffect, useLayoutEffect, useState} from 'react';
 
-import {Button, Typography, withStyles, makeStyles} from '@material-ui/core';
-import {purple} from '@material-ui/core/colors';
-import ProgressBar from "@ramonak/react-progress-bar";
+import {Typography} from '@material-ui/core';
 
 import QuestionBlock from '../../components/QuestionBlock/QuestionBlock';
 import TitleSeparator from '../../components/UI/TitleSeparator/TitleSeparator';
@@ -10,7 +8,7 @@ import styles from './CategoryPage.module.sass'
 import {useParams} from 'react-router-dom';
 import {useDispatch, useSelector} from 'react-redux';
 import {setCurrentCategoryAC} from '../../redux/actions/category';
-import {fetchQuestionsAC} from '../../redux/actions/questions';
+import {fetchQuestionsAC, setCurrentQuestion, submitAnswer} from '../../redux/actions/questions';
 import Timer from '../../components/Timer/Timer';
 import NavigationBlock from '../../components/NavigationBlock/NavigationBlock';
 
@@ -19,8 +17,8 @@ function CategoryPage() {
   const {currentCategory, isLoading} = useSelector(({category}) => category);
   const categoryId = Number(useParams().id);
   const [inProcess, setInProcess] = useState(false);
-
-  console.log('updated');
+  const [questionNumber, setQuestionNumber] = useState(1);
+  const {questions, currentQuestion} = useSelector(({questions}) => questions);
 
   useLayoutEffect(() => {
     if (currentCategory?.id !== categoryId) {
@@ -30,12 +28,34 @@ function CategoryPage() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  useEffect(() => {
+    questions.length && dispatch(setCurrentQuestion(questions[questionNumber-1]));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [questionNumber])
+
   const startQuiz = () => {
     setInProcess(true)
+    dispatch(setCurrentQuestion(questions[questionNumber-1]))
   }
 
   const endQuiz = () => {
     setInProcess(false)
+  }
+
+  const nextQuestion = () => {
+    if (questionNumber < questions.length) {
+      setQuestionNumber(questionNumber + 1);
+    }
+  }
+
+  const prevQuestion = () => {
+    if (questionNumber > 1) {
+      setQuestionNumber(questionNumber - 1);
+    }
+  }
+
+  const onSubmitAnswer = () => {
+    dispatch(submitAnswer(currentQuestion));
   }
 
   return (
@@ -50,20 +70,24 @@ function CategoryPage() {
       </Typography>
 
       <div className={styles.quizWindow}>
-        <TitleSeparator title="Question 1"/>
+        <TitleSeparator title={`Question ${questionNumber}`}/>
 
         <Timer status={inProcess}/>
 
         <div className={styles.questionsLine}>
-          Question <b>1</b> of 10
+          {/*Question <b>{questions.findIndex(item => item.id === currentQuestion.id) + 1} </b> of {questions?.length}*/}
+          Question <b>{questionNumber} </b> of {questions?.length}
         </div>
 
-        <QuestionBlock/>
+        <QuestionBlock currentQuestion={currentQuestion}/>
 
         <NavigationBlock
           status={inProcess}
           startQuiz={startQuiz}
           endQuiz={endQuiz}
+          nextQuestion={nextQuestion}
+          prevQuestion={prevQuestion}
+          onSubmitAnswer={onSubmitAnswer}
         />
 
       </div>

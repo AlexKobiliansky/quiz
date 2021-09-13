@@ -30,6 +30,8 @@ const Timer = ({status}) => {
     } else {
       clearInterval(interv);
     }
+
+    return () => clearInterval(interv)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [status])
 

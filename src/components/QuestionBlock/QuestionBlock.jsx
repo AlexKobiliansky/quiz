@@ -11,7 +11,7 @@ const useStyles = makeStyles({
   },
 });
 
-const QuestionBlock = () => {
+const QuestionBlock = ({currentQuestion}) => {
   const classes = useStyles();
   const [state, setState] = useState({
     checkedA: true,
@@ -33,7 +33,7 @@ const QuestionBlock = () => {
 
   return (
     <div className={styles.questionBlock}>
-      <div className={styles.question}>What should be ...?</div>
+      <div className={styles.question}>{currentQuestion.question}</div>
       <div className={styles.variants}>
         <div className="variant">
           <FormControlLabel

@@ -20,7 +20,7 @@ const useStyles = makeStyles(() => ({
   }
 }));
 
-const NavigationBlock = ({status, startQuiz, endQuiz}) => {
+const NavigationBlock = ({status, startQuiz, endQuiz, nextQuestion, prevQuestion, onSubmitAnswer}) => {
   const classes = useStyles();
   return (
     <>
@@ -28,25 +28,16 @@ const NavigationBlock = ({status, startQuiz, endQuiz}) => {
         status
           ? ( <>
               <div className={styles.buttonsLine}>
-                <ColorButton
-                  color="primary"
-                  variant="contained"
-                >
+                <ColorButton color="primary" variant="contained" onClick={onSubmitAnswer}>
                   Submit Answer
                 </ColorButton>
 
                 <div className={styles.navButtons}>
-                  <Button
-                    color="primary"
-                    variant="outlined"
-                  >
+                  <Button color="primary" variant="outlined" onClick={prevQuestion}>
                     Previous question
                   </Button>
 
-                  <Button
-                    color="primary"
-                    variant="outlined"
-                  >
+                  <Button color="primary" variant="outlined" onClick={nextQuestion}>
                     Next question
                   </Button>
                 </div>
@@ -72,7 +63,6 @@ const NavigationBlock = ({status, startQuiz, endQuiz}) => {
                 />
               </div>
             </>
-
           )
           : <Button
             className={classes.padding}
