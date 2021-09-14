@@ -61,7 +61,7 @@
         "answer_e": null,
         "answer_f": null
       },
-      "multiple_correct_answers": "false",
+      "multiple_correct_answers": false,
       "correct_answers": {
         "answer_a_correct": "false",
         "answer_b_correct": "false",

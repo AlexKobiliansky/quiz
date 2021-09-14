@@ -1,107 +1,69 @@
 import React, {useState} from 'react';
-
-import {Checkbox, FormControlLabel, Radio, RadioGroup} from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
-
 import styles from './QuestionBlock.module.sass';
+import TitleSeparator from '../UI/TitleSeparator/TitleSeparator';
+import Timer from '../Timer/Timer';
+import MultipleAnswers from '../MultipleAnswers/MultipleAnswers';
+import SingleAnswers from '../SingleAnswers/SingleAnswers';
 
-const useStyles = makeStyles({
-  root: {
-    display: 'block'
-  },
-});
 
-const QuestionBlock = ({currentQuestion}) => {
-  const classes = useStyles();
-  const [state, setState] = useState({
-    checkedA: true,
-    checkedB: true,
-    checkedC: true,
-    checkedD: true,
+const QuestionBlock = ({questions, currentQuestion, inProcess, index}) => {
+  const [checkBoxValue, setCheckBoxValue] = useState({
+    answer_a: false,
+    answer_b: false,
+    answer_c: false,
+    answer_d: false,
+    answer_e: false,
+    answer_f: false,
   });
 
   const [radioValue, setRadioValue] = React.useState('');
 
-  const handleChange = (event) => {
-    setState({ ...state, [event.target.name]: event.target.checked });
+  const handleCheckBoxChange = e => {
+    setCheckBoxValue({...checkBoxValue, [e.target.name]: e.target.checked});
   };
 
   const handleRadioChange = e => {
     setRadioValue(e.target.value);
+    console.log(e.target.value)
   }
 
-
   return (
-    <div className={styles.questionBlock}>
-      {
-        currentQuestion
-          ? (<>
-            <div className={styles.question}>{currentQuestion.question}</div>
-            <div className={styles.variants}>
-              <div className="variant">
-                <FormControlLabel
-                  control={
-                    <Checkbox
-                      checked={state.checkedA}
-                      onChange={handleChange}
-                      name="checkedA"
-                      color="primary"
-                    />
-                  }
-                  label="Primary"
-                  className={classes.root}
-                />
+    <>
+      <TitleSeparator title={`Question ${index + 1}`}/>
 
-                <FormControlLabel
-                  control={
-                    <Checkbox
-                      checked={state.checkedB}
-                      onChange={handleChange}
-                      name="checkedB"
-                      color="primary"
-                    />
-                  }
-                  label="Primary"
-                  className={classes.root}
-                />
+      <Timer status={inProcess}/>
 
-                <FormControlLabel
-                  control={
-                    <Checkbox
-                      checked={state.checkedC}
-                      onChange={handleChange}
-                      name="checkedC"
-                      color="primary"
+      <div className={styles.questionsLine}>
+        Question <b>{index + 1} </b> of {questions?.length}
+      </div>
+      <div className={styles.questionBlock}>
+        {
+          currentQuestion
+            ? (<>
+              <div className={styles.question}>{currentQuestion.question}</div>
+              <div className={styles.variants}>
+                {
+                  currentQuestion.multiple_correct_answers
+                    ? <MultipleAnswers
+                      answers={currentQuestion.answers}
+                      onChange={handleCheckBoxChange}
+                      checkBoxValue={checkBoxValue}
                     />
-                  }
-                  label="Primary"
-                  className={classes.root}
-                />
-
-                <FormControlLabel
-                  control={
-                    <Checkbox
-                      checked={state.checkedD}
-                      onChange={handleChange}
-                      name="checkedD"
-                      color="primary"
+                    : <SingleAnswers
+                      answers={currentQuestion.answers}
+                      onChange={handleRadioChange}
+                      radioValue={radioValue}
                     />
-                  }
-                  label="Primary"
-                  className={classes.root}
-                />
-
-                <RadioGroup aria-label="gender" name="gender1" value={radioValue} onChange={handleRadioChange}>
-                  <FormControlLabel value="female" control={<Radio color="primary" />} label="Female" />
-                  <FormControlLabel value="male" control={<Radio color="primary" />} label="Male" />
-                </RadioGroup>
+                }
               </div>
-            </div>
-            </>)
-          : 'Вопросы закончились!'
-      }
 
-    </div>
+            </>)
+            : 'Вопросы закончились!'
+        }
+
+      </div>
+    </>
+
   );
 };
 

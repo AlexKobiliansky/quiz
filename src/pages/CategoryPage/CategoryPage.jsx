@@ -76,15 +76,13 @@ function CategoryPage() {
       </Typography>
 
       <div className={styles.quizWindow}>
-        <TitleSeparator title={`Question ${index+1}`}/>
 
-        <Timer status={inProcess}/>
-
-        <div className={styles.questionsLine}>
-          Question <b>{index + 1} </b> of {questions?.length}
-        </div>
-
-        <QuestionBlock currentQuestion={currentQuestion}/>
+        <QuestionBlock
+          questions={questions}
+          currentQuestion={currentQuestion}
+          inProcess={inProcess}
+          index={index}
+        />
 
         <NavigationBlock
           status={inProcess}
@@ -94,7 +92,6 @@ function CategoryPage() {
           prevQuestion={prevQuestion}
           onSubmitAnswer={onSubmitAnswer}
         />
-
       </div>
     </div>
   );
