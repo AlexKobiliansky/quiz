@@ -4,19 +4,14 @@ import TitleSeparator from '../UI/TitleSeparator/TitleSeparator';
 import Timer from '../Timer/Timer';
 import MultipleAnswers from '../MultipleAnswers/MultipleAnswers';
 import SingleAnswers from '../SingleAnswers/SingleAnswers';
+import {useSelector} from 'react-redux';
 
 
-const QuestionBlock = ({questions, currentQuestion, inProcess, index}) => {
-  const [checkBoxValue, setCheckBoxValue] = useState({
-    answer_a: false,
-    answer_b: false,
-    answer_c: false,
-    answer_d: false,
-    answer_e: false,
-    answer_f: false,
-  });
+const QuestionBlock = ({checkBoxValue, setCheckBoxValue, radioValue, setRadioValue}) => {
+  const {questions, currentQuestion} = useSelector(({questions}) => questions);
+  const {inProcess} = useSelector(({category}) => category);
+  const index = questions.findIndex(item => item.id === currentQuestion?.id);
 
-  const [radioValue, setRadioValue] = React.useState('');
 
   const handleCheckBoxChange = e => {
     setCheckBoxValue({...checkBoxValue, [e.target.name]: e.target.checked});
@@ -24,7 +19,6 @@ const QuestionBlock = ({questions, currentQuestion, inProcess, index}) => {
 
   const handleRadioChange = e => {
     setRadioValue(e.target.value);
-    console.log(e.target.value)
   }
 
   return (
