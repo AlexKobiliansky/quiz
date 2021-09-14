@@ -4,8 +4,9 @@ import {SET_CURRENT_QUESTION, SET_LOADING_QUESTIONS, SET_QUESTIONS, SUBMIT_ANSWE
 const defaultState = {
   isLoading: false,
   questions: [],
+  unansweredQuestions: [],
+  answeredQuestions: [],
   currentQuestion: {},
-  answeredQuestions: []
 }
 
 let questionsReducer = (state = defaultState, action) => {
@@ -19,6 +20,7 @@ let questionsReducer = (state = defaultState, action) => {
       return {
         ...state,
         questions: action.payload,
+        unansweredQuestions: action.payload,
         isLoading: false
       }
     case SET_CURRENT_QUESTION:
@@ -27,9 +29,11 @@ let questionsReducer = (state = defaultState, action) => {
         currentQuestion: action.payload
       }
     case SUBMIT_ANSWER_ON_QUESTION:
+      let index = state.unansweredQuestions.findIndex(item => item.id !== action.payload.id);
       return {
         ...state,
-        questions: state.questions.filter(item => item.id !== action.payload.id),
+        currentQuestion: state.unansweredQuestions[index],
+        unansweredQuestions: state.unansweredQuestions.filter(item => item.id !== action.payload.id),
         answeredQuestions: [
           ...state.answeredQuestions,
           action.payload

@@ -18,7 +18,9 @@ function CategoryPage() {
   const categoryId = Number(useParams().id);
   const [inProcess, setInProcess] = useState(false);
   const [questionNumber, setQuestionNumber] = useState(1);
-  const {questions, currentQuestion} = useSelector(({questions}) => questions);
+  const {questions, unansweredQuestions, currentQuestion} = useSelector(({questions}) => questions);
+
+  const index = questions.findIndex(item => item.id === currentQuestion?.id);
 
   useLayoutEffect(() => {
     if (currentCategory?.id !== categoryId) {
@@ -29,13 +31,13 @@ function CategoryPage() {
   }, []);
 
   useEffect(() => {
-    questions.length && dispatch(setCurrentQuestion(questions[questionNumber-1]));
+    questions.length && dispatch(setCurrentQuestion(unansweredQuestions[questionNumber-1]));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [questionNumber])
 
   const startQuiz = () => {
     setInProcess(true)
-    dispatch(setCurrentQuestion(questions[questionNumber-1]))
+    dispatch(setCurrentQuestion(unansweredQuestions[questionNumber-1]))
   }
 
   const endQuiz = () => {
@@ -43,7 +45,7 @@ function CategoryPage() {
   }
 
   const nextQuestion = () => {
-    if (questionNumber < questions.length) {
+    if (questionNumber < unansweredQuestions.length) {
       setQuestionNumber(questionNumber + 1);
     }
   }
@@ -55,6 +57,10 @@ function CategoryPage() {
   }
 
   const onSubmitAnswer = () => {
+    if (unansweredQuestions.length === 1) {
+      alert('Quiz done!');
+    }
+
     dispatch(submitAnswer(currentQuestion));
   }
 
@@ -70,13 +76,12 @@ function CategoryPage() {
       </Typography>
 
       <div className={styles.quizWindow}>
-        <TitleSeparator title={`Question ${questionNumber}`}/>
+        <TitleSeparator title={`Question ${index+1}`}/>
 
         <Timer status={inProcess}/>
 
         <div className={styles.questionsLine}>
-          {/*Question <b>{questions.findIndex(item => item.id === currentQuestion.id) + 1} </b> of {questions?.length}*/}
-          Question <b>{questionNumber} </b> of {questions?.length}
+          Question <b>{index + 1} </b> of {questions?.length}
         </div>
 
         <QuestionBlock currentQuestion={currentQuestion}/>

@@ -33,67 +33,74 @@ const QuestionBlock = ({currentQuestion}) => {
 
   return (
     <div className={styles.questionBlock}>
-      <div className={styles.question}>{currentQuestion.question}</div>
-      <div className={styles.variants}>
-        <div className="variant">
-          <FormControlLabel
-            control={
-              <Checkbox
-                checked={state.checkedA}
-                onChange={handleChange}
-                name="checkedA"
-                color="primary"
-              />
-            }
-            label="Primary"
-            className={classes.root}
-          />
+      {
+        currentQuestion
+          ? (<>
+            <div className={styles.question}>{currentQuestion.question}</div>
+            <div className={styles.variants}>
+              <div className="variant">
+                <FormControlLabel
+                  control={
+                    <Checkbox
+                      checked={state.checkedA}
+                      onChange={handleChange}
+                      name="checkedA"
+                      color="primary"
+                    />
+                  }
+                  label="Primary"
+                  className={classes.root}
+                />
 
-          <FormControlLabel
-            control={
-              <Checkbox
-                checked={state.checkedB}
-                onChange={handleChange}
-                name="checkedB"
-                color="primary"
-              />
-            }
-            label="Primary"
-            className={classes.root}
-          />
+                <FormControlLabel
+                  control={
+                    <Checkbox
+                      checked={state.checkedB}
+                      onChange={handleChange}
+                      name="checkedB"
+                      color="primary"
+                    />
+                  }
+                  label="Primary"
+                  className={classes.root}
+                />
 
-          <FormControlLabel
-            control={
-              <Checkbox
-                checked={state.checkedC}
-                onChange={handleChange}
-                name="checkedC"
-                color="primary"
-              />
-            }
-            label="Primary"
-            className={classes.root}
-          />
+                <FormControlLabel
+                  control={
+                    <Checkbox
+                      checked={state.checkedC}
+                      onChange={handleChange}
+                      name="checkedC"
+                      color="primary"
+                    />
+                  }
+                  label="Primary"
+                  className={classes.root}
+                />
 
-          <FormControlLabel
-            control={
-              <Checkbox
-                checked={state.checkedD}
-                onChange={handleChange}
-                name="checkedD"
-                color="primary"
-              />
-            }
-            label="Primary"
-            className={classes.root}
-          />
+                <FormControlLabel
+                  control={
+                    <Checkbox
+                      checked={state.checkedD}
+                      onChange={handleChange}
+                      name="checkedD"
+                      color="primary"
+                    />
+                  }
+                  label="Primary"
+                  className={classes.root}
+                />
 
-          <RadioGroup aria-label="gender" name="gender1" value={radioValue} onChange={handleRadioChange}>
-            <FormControlLabel value="female" control={<Radio color="primary" />} label="Female" />
-            <FormControlLabel value="male" control={<Radio color="primary" />} label="Male" />
-          </RadioGroup>
-        </div>
-      </div>
+                <RadioGroup aria-label="gender" name="gender1" value={radioValue} onChange={handleRadioChange}>
+                  <FormControlLabel value="female" control={<Radio color="primary" />} label="Female" />
+                  <FormControlLabel value="male" control={<Radio color="primary" />} label="Male" />
+                </RadioGroup>
+              </div>
+            </div>
+            </>)
+          : 'Вопросы закончились!'
+      }
+
     </div>
   );
 };
