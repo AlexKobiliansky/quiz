@@ -17,12 +17,17 @@ const initialCheckBoxValue = {
 
 function CategoryPage() {
   const {currentCategory, isLoading} = useSelector(({category}) => category);
-  const [checkBoxValue, setCheckBoxValue] = useState(initialCheckBoxValue);
-  const [radioValue, setRadioValue] = React.useState('');
+  const [radioValue, setRadioValue] = useState('');
+  const [userAnswers, setUserAnswers] = useState(initialCheckBoxValue);
 
   const resetAnswerVariants = () => {
-    setCheckBoxValue(initialCheckBoxValue);
+    setUserAnswers(initialCheckBoxValue);
     setRadioValue('');
+  }
+
+  const onRadioChange = e => {
+    setRadioValue(e.target.value);
+    setUserAnswers({...initialCheckBoxValue, [e.target.value]:true})
   }
 
   return (
@@ -38,12 +43,15 @@ function CategoryPage() {
 
       <div className={styles.quizWindow}>
         <QuestionBlock
-          checkBoxValue={checkBoxValue}
-          setCheckBoxValue={setCheckBoxValue}
+          userAnswers={userAnswers}
+          setUserAnswers={setUserAnswers}
           radioValue={radioValue}
-          setRadioValue={setRadioValue}
+          onRadioChange={onRadioChange}
         />
-        <NavigationBlock resetAnswerVariants={resetAnswerVariants} />
+        <NavigationBlock
+          resetAnswerVariants={resetAnswerVariants}
+          userAnswers={userAnswers}
+        />
       </div>
     </div>
   );

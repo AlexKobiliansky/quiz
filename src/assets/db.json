@@ -58,17 +58,17 @@
         "answer_b": "none of the above",
         "answer_c": "Table row",
         "answer_d": "Table Records",
-        "answer_e": null,
-        "answer_f": null
+        "answer_e": "sdfdsf",
+        "answer_f": "asdasdasd"
       },
       "multiple_correct_answers": false,
       "correct_answers": {
-        "answer_a_correct": "false",
-        "answer_b_correct": "false",
-        "answer_c_correct": "false",
-        "answer_d_correct": "true",
-        "answer_e_correct": "false",
-        "answer_f_correct": "false"
+        "answer_a_correct": false,
+        "answer_b_correct": false,
+        "answer_c_correct": false,
+        "answer_d_correct": true,
+        "answer_e_correct": false,
+        "answer_f_correct": false
       },
       "correct_answer": "answer_a",
       "categoryId": 3
@@ -84,14 +84,14 @@
         "answer_e": null,
         "answer_f": null
       },
-      "multiple_correct_answers": "false",
+      "multiple_correct_answers": false,
       "correct_answers": {
-        "answer_a_correct": "false",
-        "answer_b_correct": "true",
-        "answer_c_correct": "false",
-        "answer_d_correct": "false",
-        "answer_e_correct": "false",
-        "answer_f_correct": "false"
+        "answer_a_correct": false,
+        "answer_b_correct": true,
+        "answer_c_correct": false,
+        "answer_d_correct": false,
+        "answer_e_correct": false,
+        "answer_f_correct": false
       },
       "correct_answer": "answer_a",
       "categoryId": 3
@@ -107,14 +107,14 @@
         "answer_e": null,
         "answer_f": null
       },
-      "multiple_correct_answers": "false",
+      "multiple_correct_answers": false,
       "correct_answers": {
-        "answer_a_correct": "false",
-        "answer_b_correct": "false",
-        "answer_c_correct": "true",
-        "answer_d_correct": "false",
-        "answer_e_correct": "false",
-        "answer_f_correct": "false"
+        "answer_a_correct": false,
+        "answer_b_correct": false,
+        "answer_c_correct": true,
+        "answer_d_correct": false,
+        "answer_e_correct": false,
+        "answer_f_correct": false
       },
       "correct_answer": "answer_a",
       "categoryId": 3
@@ -130,14 +130,14 @@
         "answer_e": null,
         "answer_f": null
       },
-      "multiple_correct_answers": "false",
+      "multiple_correct_answers": false,
       "correct_answers": {
-        "answer_a_correct": "false",
-        "answer_b_correct": "false",
-        "answer_c_correct": "false",
-        "answer_d_correct": "true",
-        "answer_e_correct": "false",
-        "answer_f_correct": "false"
+        "answer_a_correct": false,
+        "answer_b_correct": false,
+        "answer_c_correct": false,
+        "answer_d_correct": true,
+        "answer_e_correct": false,
+        "answer_f_correct": false
       },
       "correct_answer": "answer_a",
       "categoryId": 3
@@ -153,14 +153,14 @@
         "answer_e": null,
         "answer_f": null
       },
-      "multiple_correct_answers": "false",
+      "multiple_correct_answers": false,
       "correct_answers": {
-        "answer_a_correct": "true",
-        "answer_b_correct": "false",
-        "answer_c_correct": "false",
-        "answer_d_correct": "false",
-        "answer_e_correct": "false",
-        "answer_f_correct": "false"
+        "answer_a_correct": true,
+        "answer_b_correct": false,
+        "answer_c_correct": false,
+        "answer_d_correct": false,
+        "answer_e_correct": false,
+        "answer_f_correct": false
       },
       "correct_answer": "answer_a",
       "categoryId": 3
@@ -176,14 +176,14 @@
         "answer_e": null,
         "answer_f": null
       },
-      "multiple_correct_answers": "false",
+      "multiple_correct_answers": false,
       "correct_answers": {
-        "answer_a_correct": "false",
-        "answer_b_correct": "false",
-        "answer_c_correct": "false",
-        "answer_d_correct": "true",
-        "answer_e_correct": "false",
-        "answer_f_correct": "false"
+        "answer_a_correct": false,
+        "answer_b_correct": false,
+        "answer_c_correct": false,
+        "answer_d_correct": true,
+        "answer_e_correct": false,
+        "answer_f_correct": false
       },
       "correct_answer": "answer_a",
       "categoryId": 3

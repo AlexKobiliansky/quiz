@@ -1,13 +1,19 @@
 import React, {useEffect, useState} from 'react';
 import styles from './Timer.module.sass';
+import {updateCategoryTimer} from '../../redux/actions/category';
+import {useDispatch, useSelector} from 'react-redux';
 
-const Timer = ({status}) => {
+const Timer = () => {
+  const dispatch = useDispatch();
+  const {inProcess} = useSelector(({category}) => category);
   const [time, setTime] = useState({s:0, m:0, h:0});
   const [interv, setInterv] = useState();
 
   let updatedS = time.s;
   let updatedM = time.m;
   let updatedH = time.h;
+
+  console.log('timer inProccess', inProcess)
 
   const run = () => {
     if (updatedM === 60) {
@@ -24,16 +30,18 @@ const Timer = ({status}) => {
   }
 
   useEffect(() => {
-    if (status) {
+    if (inProcess) {
       run();
       setInterv(setInterval(run, 1000))
     } else {
       clearInterval(interv);
     }
 
+    dispatch(updateCategoryTimer(time))
+
     return () => clearInterval(interv)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [status])
+  }, [inProcess]);
 
   return (
     <div className={styles.timer}>

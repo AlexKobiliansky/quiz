@@ -1,10 +1,11 @@
-import {SET_LOADING_CATEGORY, SET_CATEGORIES, SET_CURRENT_CATEGORY, SET_IN_PROCESS} from '../types';
+import {SET_LOADING_CATEGORY, SET_CATEGORIES, SET_CURRENT_CATEGORY, SET_IN_PROCESS, UPDATE_TIME} from '../types';
 
 const defaultState = {
   isLoading: false,
   inProcess: false,
   categories: [],
-  currentCategory: {}
+  currentCategory: {},
+  timer: {s:0, m:0, h:0}
 }
 
 let categoryReducer = (state = defaultState, action) => {
@@ -30,6 +31,11 @@ let categoryReducer = (state = defaultState, action) => {
       return {
         ...state,
         inProcess: action.payload
+      }
+    case UPDATE_TIME:
+      return {
+        ...state,
+        timer: action.payload
       }
     default:
       return state
