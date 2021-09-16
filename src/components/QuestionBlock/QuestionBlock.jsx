@@ -51,8 +51,6 @@ const QuestionBlock = ({userAnswers, setUserAnswers, radioValue, onRadioChange})
 
   </div>
 
-
-  // return
   return <div className={styles.questionBlock}>
     <TitleSeparator title={`Question ${index + 1}`}/>
 

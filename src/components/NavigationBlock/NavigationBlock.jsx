@@ -13,7 +13,7 @@ import {
 import ProgressBar from '@ramonak/react-progress-bar';
 import {purple} from '@material-ui/core/colors';
 import {setCurrentCategoryAC, setInProcess} from '../../redux/actions/category';
-import {fetchQuestionsAC, setCurrentQuestion, submitAnswer} from '../../redux/actions/questions';
+import {fetchQuestionsAC, restartQuiz, setCurrentQuestion, submitAnswer} from '../../redux/actions/questions';
 import {useDispatch, useSelector} from 'react-redux';
 import {useHistory, useParams} from 'react-router-dom';
 
@@ -40,7 +40,7 @@ const NavigationBlock = ({resetAnswerVariants, userAnswers}) => {
   const history = useHistory()
   const dispatch = useDispatch();
   const categoryId = Number(useParams().id);
-  const {currentCategory, inProcess} = useSelector(({category}) => category);
+  const {inProcess} = useSelector(({category}) => category);
   const {questions, unansweredQuestions, answeredQuestions, currentQuestion} = useSelector(({questions}) => questions);
   const [questionNumber, setQuestionNumber] = useState(1);
   const [openDialog, setOpenDialog] = React.useState(false);
@@ -55,12 +55,14 @@ const NavigationBlock = ({resetAnswerVariants, userAnswers}) => {
 
   let progress = Math.ceil(answeredQuestions.length / questions.length * 100);
 
+  const onRestartQuiz = async () => {
+    await dispatch(setCurrentCategoryAC(categoryId));
+    await dispatch(fetchQuestionsAC(categoryId));
+    dispatch(restartQuiz())
+  }
 
   useLayoutEffect(() => {
-    if (currentCategory?.id !== categoryId) {
-      dispatch(setCurrentCategoryAC(categoryId));
-      dispatch(fetchQuestionsAC(categoryId));
-    }
+      onRestartQuiz();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -78,11 +80,12 @@ const NavigationBlock = ({resetAnswerVariants, userAnswers}) => {
   const endQuiz = async () => {
     await dispatch(setInProcess(false));
     setOpenDialog(false);
+    setQuestionNumber(1);
     history.push('/results');
   }
 
   const nextQuestion = () => {
-    if (questionNumber < unansweredQuestions.length) {
+    if (unansweredQuestions.length !== 1) {
       setQuestionNumber(questionNumber + 1);
     }
   }
@@ -96,6 +99,12 @@ const NavigationBlock = ({resetAnswerVariants, userAnswers}) => {
   const onSubmitAnswer = () => {
     if (unansweredQuestions.length === 1) {
       endQuiz();
+    }
+
+    if (questionNumber !== questions.length) {
+      dispatch(setCurrentQuestion(unansweredQuestions[questionNumber]))
+    } else {
+      setQuestionNumber(1)
     }
 
     let answer = {

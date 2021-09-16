@@ -13,8 +13,6 @@ const Timer = () => {
   let updatedM = time.m;
   let updatedH = time.h;
 
-  console.log('timer inProccess', inProcess)
-
   const run = () => {
     if (updatedM === 60) {
       updatedH++;

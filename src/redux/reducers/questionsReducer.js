@@ -1,4 +1,10 @@
-import {SET_CURRENT_QUESTION, SET_LOADING_QUESTIONS, SET_QUESTIONS, SUBMIT_ANSWER_ON_QUESTION} from '../types';
+import {
+  RESTART_QUIZ,
+  SET_CURRENT_QUESTION,
+  SET_LOADING_QUESTIONS,
+  SET_QUESTIONS,
+  SUBMIT_ANSWER_ON_QUESTION
+} from '../types';
 
 
 const defaultState = {
@@ -32,12 +38,18 @@ let questionsReducer = (state = defaultState, action) => {
       let index = state.unansweredQuestions.findIndex(item => item.id !== action.payload.id);
       return {
         ...state,
-        currentQuestion: state.unansweredQuestions[index],
+        // currentQuestion: state.unansweredQuestions[index],
         unansweredQuestions: state.unansweredQuestions.filter(item => item.id !== action.payload.id),
         answeredQuestions: [
           ...state.answeredQuestions,
           action.payload
         ]
+      }
+    case RESTART_QUIZ:
+      return {
+        ...state,
+        answeredQuestions: [],
+        currentQuestion: {}
       }
     default:
       return state

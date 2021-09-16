@@ -1,5 +1,11 @@
 import {questionsAPI} from '../../api/questionsAPI';
-import {SET_QUESTIONS, SET_LOADING_QUESTIONS, SET_CURRENT_QUESTION, SUBMIT_ANSWER_ON_QUESTION} from '../types';
+import {
+  SET_QUESTIONS,
+  SET_LOADING_QUESTIONS,
+  SET_CURRENT_QUESTION,
+  SUBMIT_ANSWER_ON_QUESTION,
+  RESTART_QUIZ
+} from '../types';
 
 export const fetchQuestionsAC = (categoryId) => async dispatch  => {
   try {
@@ -17,3 +23,4 @@ export const submitAnswer = question =>({type: SUBMIT_ANSWER_ON_QUESTION, payloa
 //actions
 const setLoading = loading => ({type: SET_LOADING_QUESTIONS, payload: loading});
 const fetchQuestions = questions => ({type: SET_QUESTIONS, payload: questions});
+export const restartQuiz = () => ({type: RESTART_QUIZ})
