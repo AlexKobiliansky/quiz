@@ -1,10 +1,12 @@
 import React, {useState} from 'react';
-
-import {Typography} from '@material-ui/core';
-import QuestionBlock from '../../components/QuestionBlock/QuestionBlock';
-import styles from './CategoryPage.module.sass'
 import {useSelector} from 'react-redux';
+//material-ui
+import {Typography} from '@material-ui/core';
+//components
+import QuestionBlock from '../../components/QuestionBlock/QuestionBlock';
 import NavigationBlock from '../../components/NavigationBlock/NavigationBlock';
+//styles
+import styles from './CategoryPage.module.sass'
 
 const initialCheckBoxValue = {
   answer_a: false,

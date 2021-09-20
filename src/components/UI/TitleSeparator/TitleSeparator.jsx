@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 import styles from './TitleSeparator.module.sass'
 
 const TitleSeparator = ({title}) => {
@@ -13,5 +13,9 @@ const TitleSeparator = ({title}) => {
     </div>
   );
 };
+
+TitleSeparator.propTypes = {
+  title: PropTypes.string.isRequired
+}
 
 export default TitleSeparator;

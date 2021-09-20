@@ -1,5 +1,9 @@
 import React, {useEffect, useLayoutEffect, useState} from 'react';
-import styles from '../../pages/CategoryPage/CategoryPage.module.sass';
+import {useDispatch, useSelector} from 'react-redux';
+import {useHistory, useParams} from 'react-router-dom';
+import ProgressBar from '@ramonak/react-progress-bar';
+import PropTypes from 'prop-types';
+//material-ui
 import {
   Button,
   Dialog,
@@ -10,12 +14,12 @@ import {
   makeStyles,
   withStyles
 } from '@material-ui/core';
-import ProgressBar from '@ramonak/react-progress-bar';
 import {purple} from '@material-ui/core/colors';
+//actions
 import {setCurrentCategoryAC, setInProcess} from '../../redux/actions/category';
 import {fetchQuestionsAC, restartQuiz, setCurrentQuestion, submitAnswer} from '../../redux/actions/questions';
-import {useDispatch, useSelector} from 'react-redux';
-import {useHistory, useParams} from 'react-router-dom';
+//styles
+import styles from '../../pages/CategoryPage/CategoryPage.module.sass';
 
 const ColorButton = withStyles((theme) => ({
   root: {
@@ -179,7 +183,6 @@ const NavigationBlock = ({resetAnswerVariants, userAnswers}) => {
           </Button>
       }
 
-
       <Dialog
         open={openDialog}
         onClose={handleCloseDialog}
@@ -187,12 +190,11 @@ const NavigationBlock = ({resetAnswerVariants, userAnswers}) => {
         aria-describedby="alert-dialog-description"
       >
         <DialogTitle id="alert-dialog-title">
-          {"Use Google's location service?"}
+          Are you sure?
         </DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            Let Google help apps determine location. This means sending anonymous
-            location data to Google, even when no apps are running.
+            There are at least one unanswered question in current quiz. Are you sure you want to end without answering?
           </DialogContentText>
         </DialogContent>
         <DialogActions>
@@ -205,5 +207,10 @@ const NavigationBlock = ({resetAnswerVariants, userAnswers}) => {
     </>
   );
 };
+
+NavigationBlock.propTypes = {
+  resetAnswerVariants: PropTypes.func,
+  userAnswers: PropTypes.object
+}
 
 export default NavigationBlock;

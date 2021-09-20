@@ -1,7 +1,9 @@
 import React from 'react';
 import {FormControlLabel, Radio, RadioGroup} from '@material-ui/core';
+import PropTypes from 'prop-types';
 
 const SingleAnswers = ({answers, onChange, radioValue}) => {
+  console.log('answers', answers)
   return (
     <>
       <RadioGroup aria-label="gender" name="gender1" value={radioValue} onChange={onChange}>
@@ -19,5 +21,11 @@ const SingleAnswers = ({answers, onChange, radioValue}) => {
     </>
   );
 };
+
+SingleAnswers.propTypes = {
+  answers: PropTypes.object,
+  onChange: PropTypes.func.isRequired,
+  radioValue: PropTypes.string
+}
 
 export default SingleAnswers;

@@ -1,12 +1,16 @@
 import React from 'react';
-import styles from './QuestionBlock.module.sass';
+import PropTypes from 'prop-types';
+import {useSelector} from 'react-redux';
+//material-ui
+import {Skeleton} from '@material-ui/lab';
+import {makeStyles} from '@material-ui/core';
+//components
 import TitleSeparator from '../UI/TitleSeparator/TitleSeparator';
 import Timer from '../Timer/Timer';
 import MultipleAnswers from '../MultipleAnswers/MultipleAnswers';
 import SingleAnswers from '../SingleAnswers/SingleAnswers';
-import {useSelector} from 'react-redux';
-import {Skeleton} from '@material-ui/lab';
-import {makeStyles} from '@material-ui/core';
+//styles
+import styles from './QuestionBlock.module.sass';
 
 const useStyles = makeStyles(() => ({
   skeleton: {
@@ -29,7 +33,7 @@ const QuestionBlock = ({userAnswers, setUserAnswers, radioValue, onRadioChange})
       currentQuestion
         ? (<>
           <div className={styles.question}>{currentQuestion.question}</div>
-          <div className={styles.variants}>
+          <div>
             {
               currentQuestion.multiple_correct_answers
                 ? <MultipleAnswers
@@ -48,7 +52,6 @@ const QuestionBlock = ({userAnswers, setUserAnswers, radioValue, onRadioChange})
         </>)
         : 'Вопросы закончились!'
     }
-
   </div>
 
   return <div className={styles.questionBlock}>
@@ -62,7 +65,13 @@ const QuestionBlock = ({userAnswers, setUserAnswers, radioValue, onRadioChange})
 
     {inProcess ? questionMarkup : <Skeleton variant="rect" width='100%' height={320} className={classes.skeleton}/>}
   </div>
-
 };
+
+QuestionBlock.propTypes = {
+  userAnswers: PropTypes.object.isRequired,
+  setUserAnswers: PropTypes.func.isRequired,
+  radioValue: PropTypes.string,
+  onRadioChange: PropTypes.func.isRequired
+}
 
 export default QuestionBlock;

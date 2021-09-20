@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react';
-import styles from './Timer.module.sass';
-import {updateCategoryTimer} from '../../redux/actions/category';
 import {useDispatch, useSelector} from 'react-redux';
+import {updateCategoryTimer} from '../../redux/actions/category';
+import styles from './Timer.module.sass';
+
 
 const Timer = () => {
   const dispatch = useDispatch();

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {Checkbox, FormControlLabel} from '@material-ui/core';
 import {makeStyles} from '@material-ui/core/styles';
 
@@ -33,5 +34,11 @@ const MultipleAnswers = ({answers, onChange, checkBoxValue}) => {
     </>
   );
 };
+
+MultipleAnswers.propTypes = {
+  answers: PropTypes.object.isRequired,
+  onChange: PropTypes.func.isRequired,
+  checkBoxValue: PropTypes.object
+}
 
 export default MultipleAnswers;

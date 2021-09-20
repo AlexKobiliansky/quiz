@@ -1,13 +1,15 @@
 import React, {useEffect} from 'react';
-
+import {useDispatch, useSelector} from 'react-redux';
+//material-ui
 import {Typography} from '@material-ui/core';
 import {makeStyles} from '@material-ui/core/styles';
-
-import Category from '../../components/Category/Category';
-import styles from './CategoriesPage.module.sass';
-import {useDispatch, useSelector} from 'react-redux';
-import {fetchCategoriesAC} from '../../redux/actions/category';
 import {Skeleton} from '@material-ui/lab';
+//components
+import Category from '../../components/Category/Category';
+//actions
+import {fetchCategoriesAC} from '../../redux/actions/category';
+//styles
+import styles from './CategoriesPage.module.sass';
 
 const useStyles = makeStyles({
   root: {

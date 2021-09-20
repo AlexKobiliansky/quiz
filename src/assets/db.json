@@ -63,12 +63,12 @@
       },
       "multiple_correct_answers": false,
       "correct_answers": {
-        "answer_a_correct": false,
-        "answer_b_correct": false,
-        "answer_c_correct": false,
-        "answer_d_correct": true,
-        "answer_e_correct": false,
-        "answer_f_correct": false
+        "answer_a": false,
+        "answer_b": false,
+        "answer_c": false,
+        "answer_d": true,
+        "answer_e": false,
+        "answer_f": false
       },
       "correct_answer": "answer_a",
       "categoryId": 3
@@ -86,12 +86,12 @@
       },
       "multiple_correct_answers": false,
       "correct_answers": {
-        "answer_a_correct": false,
-        "answer_b_correct": true,
-        "answer_c_correct": false,
-        "answer_d_correct": false,
-        "answer_e_correct": false,
-        "answer_f_correct": false
+        "answer_a": false,
+        "answer_b": true,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
       },
       "correct_answer": "answer_a",
       "categoryId": 3
@@ -109,12 +109,12 @@
       },
       "multiple_correct_answers": false,
       "correct_answers": {
-        "answer_a_correct": false,
-        "answer_b_correct": false,
-        "answer_c_correct": true,
-        "answer_d_correct": false,
-        "answer_e_correct": false,
-        "answer_f_correct": false
+        "answer_a": false,
+        "answer_b": false,
+        "answer_c": true,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
       },
       "correct_answer": "answer_a",
       "categoryId": 3
@@ -132,12 +132,12 @@
       },
       "multiple_correct_answers": false,
       "correct_answers": {
-        "answer_a_correct": false,
-        "answer_b_correct": false,
-        "answer_c_correct": false,
-        "answer_d_correct": true,
-        "answer_e_correct": false,
-        "answer_f_correct": false
+        "answer_a": false,
+        "answer_b": false,
+        "answer_c": false,
+        "answer_d": true,
+        "answer_e": false,
+        "answer_f": false
       },
       "correct_answer": "answer_a",
       "categoryId": 3
@@ -155,12 +155,12 @@
       },
       "multiple_correct_answers": false,
       "correct_answers": {
-        "answer_a_correct": true,
-        "answer_b_correct": false,
-        "answer_c_correct": false,
-        "answer_d_correct": false,
-        "answer_e_correct": false,
-        "answer_f_correct": false
+        "answer_a": true,
+        "answer_b": false,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
       },
       "correct_answer": "answer_a",
       "categoryId": 3
@@ -178,12 +178,12 @@
       },
       "multiple_correct_answers": false,
       "correct_answers": {
-        "answer_a_correct": false,
-        "answer_b_correct": false,
-        "answer_c_correct": false,
-        "answer_d_correct": true,
-        "answer_e_correct": false,
-        "answer_f_correct": false
+        "answer_a": false,
+        "answer_b": false,
+        "answer_c": false,
+        "answer_d": true,
+        "answer_e": false,
+        "answer_f": false
       },
       "correct_answer": "answer_a",
       "categoryId": 3

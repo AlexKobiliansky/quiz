@@ -35,7 +35,6 @@ let questionsReducer = (state = defaultState, action) => {
         currentQuestion: action.payload
       }
     case SUBMIT_ANSWER_ON_QUESTION:
-      let index = state.unansweredQuestions.findIndex(item => item.id !== action.payload.id);
       return {
         ...state,
         // currentQuestion: state.unansweredQuestions[index],
