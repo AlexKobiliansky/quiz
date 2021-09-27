@@ -4,52 +4,564 @@
       "id": 1,
       "title": "JavaScript",
       "img": "https://res.cloudinary.com/do1zs5utw/image/upload/v1631222510/javascript_s199nx.png",
-      "totalQuestions": 25
+      "totalQuestions": 20
     },
     {
       "id": 2,
       "title": "PHP",
       "img": "https://res.cloudinary.com/do1zs5utw/image/upload/v1631222510/php_tenaqz.jpg",
-      "totalQuestions": 10
+      "totalQuestions": 20
     },
     {
       "id": 3,
       "title": "HTML",
       "img": "https://res.cloudinary.com/do1zs5utw/image/upload/v1631222510/html_hnl59u.jpg",
-      "totalQuestions": 8
+      "totalQuestions": 20
     },
     {
       "id": 4,
       "title": "Linux",
-      "img": "",
-      "totalQuestions": 10
+      "img": "https://res.cloudinary.com/do1zs5utw/image/upload/v1632526779/linux_mmurrv.jpg",
+      "totalQuestions": 1
     },
     {
       "id": 5,
       "title": "Docker",
       "img": "",
-      "totalQuestions": 24
+      "totalQuestions": 20
     },
     {
       "id": 6,
       "title": "MySQL",
-      "img": "",
-      "totalQuestions": 25
+      "img": "https://res.cloudinary.com/do1zs5utw/image/upload/v1632526779/mysql_jgpxh9.png",
+      "totalQuestions": 16
     },
     {
       "id": 7,
-      "title": "Kubernetes",
-      "img": "",
-      "totalQuestions": 25
+      "title": "Wordpress",
+      "img": "https://res.cloudinary.com/do1zs5utw/image/upload/v1632526783/wordpress_nfcfdz.png",
+      "totalQuestions": 20
     },
     {
       "id": 8,
       "title": "Bash",
-      "img": "",
-      "totalQuestions": 35
+      "img": "https://res.cloudinary.com/do1zs5utw/image/upload/v1632526778/bash_tzydjb.jpg",
+      "totalQuestions": 2
     }
   ],
   "questions": [
+    {
+      "id": 489,
+      "question": "Which Element Represents A Control For Generating A Public-private Key Pair?",
+      "answers": {
+        "answer_a": "Keygen",
+        "answer_b": "Key",
+        "answer_c": "Command",
+        "answer_d": "Ins",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": true,
+        "answer_b": false,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 8
+    },
+    {
+      "id": 493,
+      "question": "Which of the following input control represents a date and time (year, month, day, hour, minute, second, fractions of a second) encoded according to ISO 8601 with the time zone set to UTC in Web Form 2.0?",
+      "answers": {
+        "answer_a": "datetime",
+        "answer_b": "datetime-local",
+        "answer_c": "month",
+        "answer_d": "date",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": true,
+        "answer_b": false,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 8
+    },
+    {
+      "id": 963,
+      "question": "Select all true statements for a node in Kubernetes?",
+      "answers": {
+        "answer_a": "A node is a worker machine in Kubernetes, previously known as a minion",
+        "answer_b": "Each node contains the services necessary to run pods and is managed by the master components",
+        "answer_c": "A node may be a VM or physical machine, depending on the cluster.",
+        "answer_d": "There is only one node in each Kubernetes cluster",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": true,
+      "correct_answers": {
+        "answer_a": true,
+        "answer_b": true,
+        "answer_c": true,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": null,
+      "categoryId": 5
+    },
+    {
+      "id": 946,
+      "question": "Which command will you use to update a Kubernetes deployment?",
+      "answers": {
+        "answer_a": "kubectl setimage deployment/Deployment tomcat = tomcat:6.0",
+        "answer_b": "kubectl --setimage deployment/Deployment tomcat = tomcat:6.0",
+        "answer_c": "kubectl setimage deploy/Deployment tomcat = tomcat:6.0",
+        "answer_d": null,
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": true,
+        "answer_b": false,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": null,
+      "categoryId": 5
+    },
+    {
+      "id": 836,
+      "question": "________is a text document that contains all the commands a user could call on the command line to assemble an image.",
+      "answers": {
+        "answer_a": "Docker Cloud",
+        "answer_b": "Docker Compose",
+        "answer_c": "Dockerfile",
+        "answer_d": "Docker Kitematic",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": false,
+        "answer_c": true,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": null,
+      "categoryId": 5
+    },
+    {
+      "id": 1029,
+      "question": "How to retrieve the join token for worker nodes in Docker Swarm?",
+      "answers": {
+        "answer_a": "docker swarm join-token worker",
+        "answer_b": "docker get join-token worker",
+        "answer_c": "docker swarm get join-token worker",
+        "answer_d": "docker swarm join-token get worker",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": true,
+        "answer_b": false,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 5
+    },
+    {
+      "id": 801,
+      "question": "If you wish to use a base image and make modifications or personalize it, how do you do that?",
+      "answers": {
+        "answer_a": "docker <image_name>",
+        "answer_b": "docker --pull <image_name>",
+        "answer_c": "docker pull <image_name>",
+        "answer_d": null,
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": false,
+        "answer_c": true,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 5
+    },
+    {
+      "id": 841,
+      "question": "Following Docker command: docker build -t my_user/repo_name:1.0 is used to:",
+      "answers": {
+        "answer_a": "Activate default VM machine",
+        "answer_b": "Commit changes done in a Docker image",
+        "answer_c": "Build an image",
+        "answer_d": "Access a running container",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": false,
+        "answer_c": true,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": null,
+      "categoryId": 5
+    },
+    {
+      "id": 948,
+      "question": "Which command will you use to list all deployments?",
+      "answers": {
+        "answer_a": "kubectl get deploy",
+        "answer_b": "kubectl require deployments",
+        "answer_c": "kubectl get deployments",
+        "answer_d": null,
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": false,
+        "answer_c": true,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": null,
+      "categoryId": 5
+    },
+    {
+      "id": 833,
+      "question": "________is the enterprise-grade cluster management solution from Docker. It manages your whole cluster from a single place.",
+      "answers": {
+        "answer_a": "Docker Swarm",
+        "answer_b": "Docker Compose",
+        "answer_c": "Docker Universal Control Plane",
+        "answer_d": "Docker Hub",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": false,
+        "answer_c": true,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": null,
+      "tip": null,
+      "tags": [
+        {
+          "name": "Docker"
+        }
+      ],
+      "categoryId": 5
+    },
+    {
+      "id": 817,
+      "question": "Is there a way to identify the status of a Docker container?",
+      "answers": {
+        "answer_a": "$ docker --ps",
+        "answer_b": "$ docker -ps",
+        "answer_c": "$ docker ps",
+        "answer_d": null,
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": false,
+        "answer_c": true,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": null,
+      "categoryId": 5
+    },
+    {
+      "id": 999,
+      "question": "Which of the following are features of Kubernetes?",
+      "answers": {
+        "answer_a": "Self-healing",
+        "answer_b": "Kubernetes Swarm",
+        "answer_c": "Secrets and configuration management",
+        "answer_d": "Batch execution",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": true,
+      "correct_answers": {
+        "answer_a": true,
+        "answer_b": false,
+        "answer_c": true,
+        "answer_d": true,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": null,
+      "categoryId": 5
+    },
+    {
+      "id": 941,
+      "question": "What will happen while adding new API to Kubernetes?",
+      "answers": {
+        "answer_a": "Adding a new API will block the previous API",
+        "answer_b": "Adding a new API will remove some clusters",
+        "answer_c": "Adding a new API will improve the functioning ability of Kubernetes",
+        "answer_d": null,
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": false,
+        "answer_c": true,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": null,
+      "categoryId": 5
+    },
+    {
+      "id": 835,
+      "question": "________is an open-source project built to simplify and streamline using Docker on a Mac or Windows.",
+      "answers": {
+        "answer_a": "Docker Cloud",
+        "answer_b": "Docker Compose",
+        "answer_c": "Docker Universal Control Plane",
+        "answer_d": "Docker Kitematic",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": false,
+        "answer_c": false,
+        "answer_d": true,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": null,
+      "categoryId": 5
+    },
+    {
+      "id": 1009,
+      "question": "What is the command line interface used to communicate with Kubernetes?",
+      "answers": {
+        "answer_a": "kubeapi",
+        "answer_b": "kubelet",
+        "answer_c": "k8sctl",
+        "answer_d": "kubectl",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": false,
+        "answer_c": false,
+        "answer_d": true,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": null,
+      "categoryId": 5
+    },
+    {
+      "id": 1027,
+      "question": "What is the recommended number of manager nodes in Docker Swarm?",
+      "answers": {
+        "answer_a": "0 managers",
+        "answer_b": "1 manager",
+        "answer_c": "As many as possible",
+        "answer_d": "3 or 5 managers",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": false,
+        "answer_c": false,
+        "answer_d": true,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 5
+    },
+    {
+      "id": 935,
+      "question": "Which command would show you the logs of a running pod in Kubernetes?",
+      "answers": {
+        "answer_a": "kubectl print pod-name",
+        "answer_b": "kubectl log pod-name",
+        "answer_c": "kubectl show -l pod-name",
+        "answer_d": "kubectl logs pod-name",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": false,
+        "answer_c": false,
+        "answer_d": true,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": null,
+      "categoryId": 5
+    },
+    {
+      "id": 172,
+      "question": "Docker containers can run on:",
+      "answers": {
+        "answer_a": "Only Linux distributions",
+        "answer_b": "Linux distributions and Windows systems",
+        "answer_c": "Only Windows systems",
+        "answer_d": null,
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": true,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 5
+    },
+    {
+      "id": 855,
+      "question": "How to login into docker hub.",
+      "answers": {
+        "answer_a": "$ docker $login",
+        "answer_b": "$ docker --log",
+        "answer_c": "$ docker login",
+        "answer_d": null,
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": false,
+        "answer_c": true,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 5
+    },
+    {
+      "id": 889,
+      "question": "If you exit a container accidentally, will you lose all the work?",
+      "answers": {
+        "answer_a": true,
+        "answer_b": false,
+        "answer_c": null,
+        "answer_d": null,
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": true,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": null,
+      "categoryId": 5
+    },
+    {
+      "id": 874,
+      "question": "Docker containers and images are included in Plesk Backup and migrated by Plesk Migrator.",
+      "answers": {
+        "answer_a": true,
+        "answer_b": false,
+        "answer_c": null,
+        "answer_d": null,
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": true,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": null,
+      "categoryId": 5
+    },
+    {
+      "id": 804,
+      "question": "Suppose you have 3 containers running and out of these, you wish to access one of them. How do you access a running container?",
+      "answers": {
+        "answer_a": "$ docker exec it <container id> bash",
+        "answer_b": "$ docker exec --it <container id>",
+        "answer_c": "$ docker exec -it <container id> bash",
+        "answer_d": null,
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": false,
+        "answer_c": true,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": null,
+      "categoryId": 5
+    },
     {
       "id": 509,
       "question": "<TD> … </TD> tag is used for ________",
@@ -58,8 +570,8 @@
         "answer_b": "none of the above",
         "answer_c": "Table row",
         "answer_d": "Table Records",
-        "answer_e": "sdfdsf",
-        "answer_f": "asdasdasd"
+        "answer_e": null,
+        "answer_f": null
       },
       "multiple_correct_answers": false,
       "correct_answers": {
@@ -187,6 +699,2103 @@
       },
       "correct_answer": "answer_a",
       "categoryId": 3
+    },
+    {
+      "id": 482,
+      "question": "How can you create an E-mail link?",
+      "answers": {
+        "answer_a": "<a Href=\"a@b\">",
+        "answer_b": "<mail Href=\"a@b\">",
+        "answer_c": "<a Href=\"mailto:a@b.com\">",
+        "answer_d": "<mail>a@b</mail>",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": false,
+        "answer_c": true,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 3
+    },
+    {
+      "id": 480,
+      "question": "Which of the following attribute triggers event when an element gets user Input?",
+      "answers": {
+        "answer_a": "Ondata",
+        "answer_b": "Onloadeddata",
+        "answer_c": "Oninput",
+        "answer_d": "Onhaschange",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": false,
+        "answer_c": true,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 3
+    },
+    {
+      "id": 459,
+      "question": "Which of the following will create the so called Hamburger Menu?",
+      "answers": {
+        "answer_a": "Icon-prev",
+        "answer_b": "Icon-next",
+        "answer_c": "Img-circle",
+        "answer_d": "Icon-bar",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": false,
+        "answer_c": false,
+        "answer_d": true,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 3
+    },
+    {
+      "id": 532,
+      "question": "There are ____ different heading tags in HTML",
+      "answers": {
+        "answer_a": "4",
+        "answer_b": "7",
+        "answer_c": "6",
+        "answer_d": "5",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": false,
+        "answer_c": true,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 3
+    },
+    {
+      "id": 523,
+      "question": "Which attribute can be used with BODY tag to set background color green?",
+      "answers": {
+        "answer_a": "background=\"green\"",
+        "answer_b": "bgcolor=\"green\"",
+        "answer_c": "vlink=\"green\"",
+        "answer_d": "None of above",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": true,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 3
+    },
+    {
+      "id": 465,
+      "question": "Which of the following encoding an XML parser assumes ?",
+      "answers": {
+        "answer_a": "UTF-16",
+        "answer_b": "UTF-32",
+        "answer_c": "UTF-8",
+        "answer_d": "UTF-64",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": true,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": true,
+        "answer_c": true,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 3
+    },
+    {
+      "id": 539,
+      "question": "How can we define a Video Tag in HTML 5?",
+      "answers": {
+        "answer_a": "<video src \"URL\"></video>",
+        "answer_b": "<video src=\"URL\"></video>",
+        "answer_c": "<video></video>",
+        "answer_d": "<video src:\"URL\"></video>",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": true,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 3
+    },
+    {
+      "id": 469,
+      "question": "The __________ Element represents a span of text that is isolated from it's surroundings for the purposes of bidirectional text formatting",
+      "answers": {
+        "answer_a": "B",
+        "answer_b": "Base",
+        "answer_c": "Bdo",
+        "answer_d": "Bdi",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": false,
+        "answer_c": false,
+        "answer_d": true,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 3
+    },
+    {
+      "id": 466,
+      "question": "Which of the following will provide additional Information about something?",
+      "answers": {
+        "answer_a": "Jumbotron",
+        "answer_b": "Item",
+        "answer_c": "Label-danger",
+        "answer_d": "Label",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": true,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 3
+    },
+    {
+      "id": 543,
+      "question": "What is cite tag in HTML5?",
+      "answers": {
+        "answer_a": "<cite title\"value\">Some Text Here</cite>",
+        "answer_b": "<cite title:\"value\">Some Text Here</cite>",
+        "answer_c": "<cite title=\"value\">Some Text Here</cite>",
+        "answer_d": null,
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": false,
+        "answer_c": true,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 3
+    },
+    {
+      "id": 524,
+      "question": "Which attribute is used with an img tag to display the text if image could not load in browser?",
+      "answers": {
+        "answer_a": "description",
+        "answer_b": "id",
+        "answer_c": "alt",
+        "answer_d": "name",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": false,
+        "answer_c": true,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 3
+    },
+    {
+      "id": 500,
+      "question": "Which of the following attribute triggers an event when media data is loaded?",
+      "answers": {
+        "answer_a": "onhaschange",
+        "answer_b": "onloadeddata",
+        "answer_c": "onload",
+        "answer_d": "oninpu",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": true,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 3
+    },
+    {
+      "id": 541,
+      "question": "What is the use of Scalable Vector Graphics (SVG) in HTML5?",
+      "answers": {
+        "answer_a": "Scalable Vector Graphics (SVG) is the part of the vector-based family of graphics. There are various forms of Raster-based graphics available that stores the color definition for each pixel in an array of data.",
+        "answer_b": "Scalable Vector Graphics (SVG) is the part of the colored-based family of graphics. There are various forms of Raster-based graphics available that stores the design definition for each pixel in an array of data.",
+        "answer_c": null,
+        "answer_d": null,
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": true,
+        "answer_b": false,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 3
+    },
+    {
+      "id": 511,
+      "question": "Which tag is used to display the large font size?",
+      "answers": {
+        "answer_a": "<LARGE></LARGE>",
+        "answer_b": "<FONT></FONT>",
+        "answer_c": "< SIZE ></SIZE>",
+        "answer_d": "<BIG></BIG>",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": false,
+        "answer_c": false,
+        "answer_d": true,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 3
+    },
+    {
+      "id": 976,
+      "question": "What is the correct syntax for referring to an external script called \"xxx.js\"?",
+      "answers": {
+        "answer_a": "<script name=\"xxx.js\">",
+        "answer_b": "<script src=\"xxx.js\">",
+        "answer_c": "<script href=\"xxx.js\">",
+        "answer_d": "<script declare=\"xxx.js\">",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": true,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 1
+    },
+    {
+      "id": 985,
+      "question": "How can you add a comment in a JavaScript?",
+      "answers": {
+        "answer_a": "//This is a comment",
+        "answer_b": "'This is a comment",
+        "answer_c": "<!--This is a comment-->",
+        "answer_d": null,
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": true,
+        "answer_b": false,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 1
+    },
+    {
+      "id": 984,
+      "question": "How does a FOR loop start?",
+      "answers": {
+        "answer_a": "for i = 1 to 5",
+        "answer_b": "for (i = 0; i <= 5; i++)",
+        "answer_c": "for (i <= 5; i++)",
+        "answer_d": "for (i = 0; i <= 5)",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": true,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 1
+    },
+    {
+      "id": 997,
+      "question": "Is JavaScript case-sensitive?",
+      "answers": {
+        "answer_a": true,
+        "answer_b": false,
+        "answer_c": null,
+        "answer_d": null,
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": true,
+        "answer_b": false,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 1
+    },
+    {
+      "id": 978,
+      "question": "How do you write \"Hello World\" in an alert box?",
+      "answers": {
+        "answer_a": "msgBox(\"Hello World\");",
+        "answer_b": "alert(\"Hello World\");",
+        "answer_c": "msg(\"Hello World\");",
+        "answer_d": "alertBox(\"Hello World\");",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": true,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 1
+    },
+    {
+      "id": 989,
+      "question": "How do you find the number with the highest value of x and y?",
+      "answers": {
+        "answer_a": "ceil(x, y)",
+        "answer_b": "Math.ceil(x, y)",
+        "answer_c": "Math.max(x, y)",
+        "answer_d": "top(x, y)",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": false,
+        "answer_c": true,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 1
+    },
+    {
+      "id": 991,
+      "question": "JavaScript is the same as Java.",
+      "answers": {
+        "answer_a": false,
+        "answer_b": true,
+        "answer_c": null,
+        "answer_d": null,
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": true,
+        "answer_b": false,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 1
+    },
+    {
+      "id": 995,
+      "question": "Which operator is used to assign a value to a variable?",
+      "answers": {
+        "answer_a": "x",
+        "answer_b": "-",
+        "answer_c": "=",
+        "answer_d": "*",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": false,
+        "answer_c": true,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 1
+    },
+    {
+      "id": 994,
+      "question": "How do you declare a JavaScript variable?",
+      "answers": {
+        "answer_a": "v carName;",
+        "answer_b": "variable carName;",
+        "answer_c": "var carName;",
+        "answer_d": null,
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": false,
+        "answer_c": true,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 1
+    },
+    {
+      "id": 979,
+      "question": "How do you create a function in JavaScript?",
+      "answers": {
+        "answer_a": "function myFunction()",
+        "answer_b": "function:myFunction()",
+        "answer_c": "function = myFunction()",
+        "answer_d": null,
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": true,
+        "answer_b": false,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 1
+    },
+    {
+      "id": 975,
+      "question": "Where is the correct place to insert a JavaScript?",
+      "answers": {
+        "answer_a": "The <head> section",
+        "answer_b": "The <body> section",
+        "answer_c": "The <footer>",
+        "answer_d": "Both the <head> section and the <body> section are correct",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": false,
+        "answer_c": false,
+        "answer_d": true,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 1
+    },
+    {
+      "id": 988,
+      "question": "How do you round the number 7.25, to the nearest integer?",
+      "answers": {
+        "answer_a": "Math.round(7.25)",
+        "answer_b": "round(7.25)",
+        "answer_c": "rnd(7.25)",
+        "answer_d": "Math.rnd(7.25)",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": true,
+        "answer_b": false,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 1
+    },
+    {
+      "id": 980,
+      "question": "How do you call a function named \"myFunction\"?",
+      "answers": {
+        "answer_a": "myFunction()",
+        "answer_b": "call myFunction()",
+        "answer_c": "call function myFunction()",
+        "answer_d": null,
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": true,
+        "answer_b": false,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 1
+    },
+    {
+      "id": 982,
+      "question": "How to write an IF statement for executing some code if \"i\" is NOT equal to 5?",
+      "answers": {
+        "answer_a": "if (i != 5)",
+        "answer_b": "if (i <> 5)",
+        "answer_c": "if i =! 5 then",
+        "answer_d": "if i <> 5",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": true,
+        "answer_b": false,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 1
+    },
+    {
+      "id": 983,
+      "question": "How does a WHILE loop start?",
+      "answers": {
+        "answer_a": "while (i <= 10)",
+        "answer_b": "while i = 1 to 10",
+        "answer_c": "while (i <= 10; i++)",
+        "answer_d": null,
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": true,
+        "answer_b": false,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 1
+    },
+    {
+      "id": 996,
+      "question": "What will the following code return: Boolean(10 > 9)",
+      "answers": {
+        "answer_a": true,
+        "answer_b": "NaN",
+        "answer_c": false,
+        "answer_d": null,
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": true,
+        "answer_b": false,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 1
+    },
+    {
+      "id": 973,
+      "question": "Inside which HTML element do we put the JavaScript?",
+      "answers": {
+        "answer_a": "<javascript>",
+        "answer_b": "<script>",
+        "answer_c": "<js>",
+        "answer_d": "<scripting>",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": true,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 1
+    },
+    {
+      "id": 974,
+      "question": "What is the correct JavaScript syntax to change the content of the HTML element below?",
+      "answers": {
+        "answer_a": "#demo.innerHTML = \"Hello World!\";",
+        "answer_b": "document.getElementById(\"demo\").innerHTML = \"Hello World!\";",
+        "answer_c": "document.getElement(\"p\").innerHTML = \"Hello World!\";",
+        "answer_d": "document.getElementByName(\"p\").innerHTML = \"Hello World!\";",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": true,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 1
+    },
+    {
+      "id": 990,
+      "question": "What is the correct JavaScript syntax for opening a new window called \"w2\" ?",
+      "answers": {
+        "answer_a": "w2 = window.new(\"http://www.w3schools.com\");",
+        "answer_b": "w2 = window.open(\"http://www.w3schools.com\");",
+        "answer_c": null,
+        "answer_d": null,
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": true,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 1
+    },
+    {
+      "id": 986,
+      "question": "How to insert a comment that has more than one line?",
+      "answers": {
+        "answer_a": "/*This comment has more than one line*/",
+        "answer_b": "<!--This comment has more than one line-->",
+        "answer_c": "//This comment has more than one line//",
+        "answer_d": null,
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": true,
+        "answer_b": false,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 1
+    },
+    {
+      "id": 489,
+      "question": "Which Element Represents A Control For Generating A Public-private Key Pair?",
+      "answers": {
+        "answer_a": "Keygen",
+        "answer_b": "Key",
+        "answer_c": "Command",
+        "answer_d": "Ins",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": true,
+        "answer_b": false,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 4
+    },
+    {
+      "id": 362,
+      "question": "What command is used to permanently remove a record from a database table?",
+      "answers": {
+        "answer_a": "DROP",
+        "answer_b": "REMOVE",
+        "answer_c": "DELETE",
+        "answer_d": "CUT",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": false,
+        "answer_c": true,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 6
+    },
+    {
+      "id": 345,
+      "question": "Which type of database management system represents relations using tables?",
+      "answers": {
+        "answer_a": "Network DBMS",
+        "answer_b": "Hierachical DBMS",
+        "answer_c": "Relational DBMS",
+        "answer_d": "Object Oriented DBMS",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": false,
+        "answer_c": true,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 6
+    },
+    {
+      "id": 440,
+      "question": "What is the Commit command is used for?",
+      "answers": {
+        "answer_a": "To restore the old values",
+        "answer_b": "To recover the old table",
+        "answer_c": "To save the current transaction",
+        "answer_d": "To save the current table",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": false,
+        "answer_c": true,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 6
+    },
+    {
+      "id": 336,
+      "question": "Which of the following is not a valid comparison operator?",
+      "answers": {
+        "answer_a": "==",
+        "answer_b": "<>",
+        "answer_c": "<=>",
+        "answer_d": "!=",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": true,
+        "answer_b": false,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 6
+    },
+    {
+      "id": 397,
+      "question": "Commands passed to the MySQL daemon are written in",
+      "answers": {
+        "answer_a": "English",
+        "answer_b": "The Structured Query Language",
+        "answer_c": "Your Choice From Perl, PHP, Java Or Some Other Languages",
+        "answer_d": "Swedish",
+        "answer_e": "Binary",
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": true,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 6
+    },
+    {
+      "id": 383,
+      "question": "What will be the effect of the query SELECT c.*,e.* FROM clients c INNER JOIN employees e ON c.emp_no = e.emp_no;",
+      "answers": {
+        "answer_a": "return all the records from the clients table and only those that match the emp_no from the employees table",
+        "answer_b": "The query will generate an error",
+        "answer_c": "return all the records from the employees table and only those that match the emp_no from the clients table",
+        "answer_d": "return only records that have matching emp_no values in both tables",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": false,
+        "answer_c": false,
+        "answer_d": true,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 6
+    },
+    {
+      "id": 238,
+      "question": "Which of the following is the best MySQL data type for currency values?",
+      "answers": {
+        "answer_a": "SMALLINT",
+        "answer_b": "DECIMAL(18,4)",
+        "answer_c": "VARCHAR(32)",
+        "answer_d": "BIGINT",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": true,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 6
+    },
+    {
+      "id": 222,
+      "question": "The wildcard in a WHERE clause is useful when?",
+      "answers": {
+        "answer_a": "An exact match is necessary in a SELECT statement.",
+        "answer_b": "An exact match is not possible in a SELECT statement.",
+        "answer_c": "An exact match is necessary in a CREATE statement.",
+        "answer_d": "An exact match is not possible in a CREATE statement.",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": true,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 6
+    },
+    {
+      "id": 211,
+      "question": "You have to sort records in the descending order by field \"rating\". Which query will be correct?",
+      "answers": {
+        "answer_a": "SORT BY \"rating\" DESC",
+        "answer_b": "SORT BY \"rating\"",
+        "answer_c": "ORDER BY \"rating\" DESC",
+        "answer_d": "ORDER BY \"rating\"",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": false,
+        "answer_c": true,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 6
+    },
+    {
+      "id": 348,
+      "question": "The logic model of a database is?",
+      "answers": {
+        "answer_a": "concerned with the planning of the entire database development life cycle",
+        "answer_b": "concerned with the physical implementation of the database",
+        "answer_c": "concerned with developing the database model taking into consideration the physical implementation",
+        "answer_d": "concerned with developing the database model without taking into consideration the physical implementation or the DBMS",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": true,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": true,
+        "answer_c": false,
+        "answer_d": true,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 6
+    },
+    {
+      "id": 416,
+      "question": "The maximum length of the varchar columns Is",
+      "answers": {
+        "answer_a": "Upto 65, 535 Bytes",
+        "answer_b": "Upto 65, 567 Bytes",
+        "answer_c": "Upto 256 Bytes",
+        "answer_d": "None Of The Mentioned",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": true,
+        "answer_b": false,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 6
+    },
+    {
+      "id": 337,
+      "question": "Which of the following is not a MySQL statement?",
+      "answers": {
+        "answer_a": "ENUMERATE",
+        "answer_b": "EXPLAIN",
+        "answer_c": "KILL",
+        "answer_d": "LOAD DATA",
+        "answer_e": "SET",
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": true,
+        "answer_b": false,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 6
+    },
+    {
+      "id": 425,
+      "question": "TCL is used for _______?",
+      "answers": {
+        "answer_a": "Control access to data stored in a database",
+        "answer_b": "Managing the changes made by DML statements",
+        "answer_c": "Defining database schema",
+        "answer_d": "None of the mentioned",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": true,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 6
+    },
+    {
+      "id": 407,
+      "question": "Which of the following is available in MySQL:",
+      "answers": {
+        "answer_a": "CREATE VIEW",
+        "answer_b": "CREATE DATABASE",
+        "answer_c": "CREATE TRIGGER",
+        "answer_d": "CREATE SCHEMA",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": true,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 6
+    },
+    {
+      "id": 414,
+      "question": "Character data can be stored as",
+      "answers": {
+        "answer_a": "Both fixed or variable length strings",
+        "answer_b": "Variable length strings",
+        "answer_c": "Fixed length strings",
+        "answer_d": "None of the mentioned",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": true,
+        "answer_b": false,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 6
+    },
+    {
+      "id": 221,
+      "question": "The command to remove rows from a table \"MOVIE\" is:",
+      "answers": {
+        "answer_a": "REMOVE FROM MOVIE",
+        "answer_b": "DROP FROM MOVIE",
+        "answer_c": "DELETE FROM MOVIE WHERE",
+        "answer_d": "UPDATE FROM MOVIE",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": true,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 6
+    },
+    {
+      "id": 641,
+      "question": "What does PEAR stand for?",
+      "answers": {
+        "answer_a": "PHP Export and Application Repository.",
+        "answer_b": "PHP Extension and Application Repository.",
+        "answer_c": "PHP External and Application Repository.",
+        "answer_d": null,
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": true,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 2
+    },
+    {
+      "id": 551,
+      "question": "Which of the following is not a Superglobal in PHP?",
+      "answers": {
+        "answer_a": "$_SERVER",
+        "answer_b": "$_PUT",
+        "answer_c": "$_FILES",
+        "answer_d": "$_ENV",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": true,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 2
+    },
+    {
+      "id": 592,
+      "question": "What does the expression Exception::__toString means?",
+      "answers": {
+        "answer_a": "Exception::__String",
+        "answer_b": "Exception::__toString",
+        "answer_c": "Exception::_toString",
+        "answer_d": null,
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": true,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 2
+    },
+    {
+      "id": 564,
+      "question": "Which one of the following property scopes is not supported by PHP?",
+      "answers": {
+        "answer_a": "public",
+        "answer_b": "static",
+        "answer_c": "friendly",
+        "answer_d": "final",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": false,
+        "answer_c": true,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 2
+    },
+    {
+      "id": 767,
+      "question": "Which of the following method of Exception class returns source line?",
+      "answers": {
+        "answer_a": "getMessage()",
+        "answer_b": "getCode()",
+        "answer_c": "getFile()",
+        "answer_d": "getLine()",
+        "answer_e": "getSource()",
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": false,
+        "answer_c": false,
+        "answer_d": true,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": null,
+      "explanation": "getLine() method of Exception class returns source line.",
+      "categoryId": 2
+    },
+    {
+      "id": 582,
+      "question": "Can I run several versions of PHP at the same time?",
+      "answers": {
+        "answer_a": true,
+        "answer_b": false,
+        "answer_c": null,
+        "answer_d": null,
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": true,
+        "answer_b": false,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 2
+    },
+    {
+      "id": 768,
+      "question": "Which of the following is used to check that a cookie is set or not?",
+      "answers": {
+        "answer_a": "getcookie() function",
+        "answer_b": "$_COOKIE variable",
+        "answer_c": "isset() function",
+        "answer_d": "None of the above.",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": false,
+        "answer_c": true,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": null,
+      "explanation": "You can use isset() function to check if a cookie is set or not.",
+      "categoryId": 2
+    },
+    {
+      "id": 552,
+      "question": "Which function is used to get the ASCII value of a character in PHP ?",
+      "answers": {
+        "answer_a": "asc()",
+        "answer_b": "ascii()",
+        "answer_c": "chr( )",
+        "answer_d": "val( )",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": false,
+        "answer_c": true,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 2
+    },
+    {
+      "id": 761,
+      "question": "Which of the following function is used to get the size of a file?",
+      "answers": {
+        "answer_a": "sizefile()",
+        "answer_b": "file_size()",
+        "answer_c": "filesize()",
+        "answer_d": "size_file()",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": false,
+        "answer_c": true,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": null,
+      "explanation": "The files's length can be found using the filesize() function which takes the file name as its argument and returns the size of the file expressed in bytes.",
+      "categoryId": 2
+    },
+    {
+      "id": 546,
+      "question": "_______________ is cocatenation operator in PHP ?",
+      "answers": {
+        "answer_a": "+ (plus)",
+        "answer_b": ".  (dot)",
+        "answer_c": "^",
+        "answer_d": "-",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": true,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 2
+    },
+    {
+      "id": 631,
+      "question": "Which library is needed to be able to use the image function?",
+      "answers": {
+        "answer_a": "GD library is needed to execute image functions.",
+        "answer_b": "GH library is needed to execute image functions.",
+        "answer_c": null,
+        "answer_d": null,
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": true,
+        "answer_b": false,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 2
+    },
+    {
+      "id": 788,
+      "question": "How can we destroy a PHP session:",
+      "answers": {
+        "answer_a": "session_destroy()",
+        "answer_b": "destroy_session()",
+        "answer_c": "session()",
+        "answer_d": "startD()",
+        "answer_e": "sessionDestroy()",
+        "answer_f": "destroySession()"
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": true,
+        "answer_b": false,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": null,
+      "categoryId": 2
+    },
+    {
+      "id": 774,
+      "question": "Which of the following is correct about NULL?",
+      "answers": {
+        "answer_a": "NULL is a special type that only has one value: NULL.",
+        "answer_b": "The special constant NULL is capitalized by convention, but actually it is case insensitive.",
+        "answer_c": "NULL is a special type that only has two values : NULL and NOT NULL",
+        "answer_d": "The special constant NULL is capitalized by convention and it should be defined as such as it's case sensitive. Meaning null is different than NULL",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": true,
+      "correct_answers": {
+        "answer_a": true,
+        "answer_b": true,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": null,
+      "categoryId": 2
+    },
+    {
+      "id": 574,
+      "question": "PHP scripts are enclosed within _______",
+      "answers": {
+        "answer_a": "<php> . . . </php>",
+        "answer_b": "<p> . . . </p>",
+        "answer_c": "?php . . . ?php",
+        "answer_d": "<?php . . . ?>",
+        "answer_e": "<? .... ?>",
+        "answer_f": "<?php"
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": false,
+        "answer_c": false,
+        "answer_d": true,
+        "answer_e": true,
+        "answer_f": true
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 2
+    },
+    {
+      "id": 583,
+      "question": "What is the purpose of $_SESSION[]?",
+      "answers": {
+        "answer_a": "Used to register a global variable",
+        "answer_b": "none of the above",
+        "answer_c": "Used to store variables of the current session",
+        "answer_d": "Used to initialize a session.",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": false,
+        "answer_c": true,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 2
+    },
+    {
+      "id": 791,
+      "question": "How to get current year in PHP ?",
+      "answers": {
+        "answer_a": "year = date(\"Year\");",
+        "answer_b": "year = date(\"Y\");",
+        "answer_c": "year = $date_(\"Y\");",
+        "answer_d": null,
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": true,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 2
+    },
+    {
+      "id": 790,
+      "question": "Which of the mentioned are the neccessary/mandatory arguments of the mail function.",
+      "answers": {
+        "answer_a": "to",
+        "answer_b": "subject",
+        "answer_c": "message",
+        "answer_d": "headers",
+        "answer_e": "parameters",
+        "answer_f": "number of recepients"
+      },
+      "multiple_correct_answers": true,
+      "correct_answers": {
+        "answer_a": true,
+        "answer_b": true,
+        "answer_c": true,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": null,
+      "categoryId": 2
+    },
+    {
+      "id": 603,
+      "question": "How is the ternary conditional operator used in PHP?",
+      "answers": {
+        "answer_a": "Expression_1?Expression_2 : Expression_3;",
+        "answer_b": "Expression_1:Expression_2 : Expression_3;",
+        "answer_c": "Expression_1?Expression_2 ? Expression_3;",
+        "answer_d": null,
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": true,
+        "answer_b": false,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 2
+    },
+    {
+      "id": 769,
+      "question": "Which of the following function sorts an array in reverse order?",
+      "answers": {
+        "answer_a": "rsort()",
+        "answer_b": "sort()",
+        "answer_c": "shuffle()",
+        "answer_d": "reset()",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": true,
+        "answer_b": false,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": null,
+      "categoryId": 2
+    },
+    {
+      "id": 604,
+      "question": "Will a comparison of an integer 12 and a string \"13\" work in PHP?",
+      "answers": {
+        "answer_a": true,
+        "answer_b": false,
+        "answer_c": null,
+        "answer_d": null,
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": true,
+        "answer_b": false,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 2
+    },
+    {
+      "id": 272,
+      "question": "What is the difference between installing and activating a theme?",
+      "answers": {
+        "answer_a": "When a theme is activated it’s what’s controlling your site, while an uninstalled theme is simply part of your theme library and available to activate.",
+        "answer_b": "When a theme is deactivated it’s what’s controlling your site, while an installed theme is simply part of your theme library and available to activate.",
+        "answer_c": "When a theme is activated it’s what’s controlling your site, while an installed theme is simply part of your theme library and available to activate.",
+        "answer_d": null,
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": false,
+        "answer_c": true,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 7
+    },
+    {
+      "id": 255,
+      "question": "What is a Child Theme?",
+      "answers": {
+        "answer_a": "The child theme is an extension of the sub-child theme",
+        "answer_b": "The child theme is an extension of the parent theme",
+        "answer_c": "The child theme is an extension of the super parent theme",
+        "answer_d": null,
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": true,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 7
+    },
+    {
+      "id": 301,
+      "question": "How can you call a constructor for a parent class?",
+      "answers": {
+        "answer_a": "Parents:: constructor($value)",
+        "answer_b": "Parents:: call_constructor($value)",
+        "answer_c": "Parents:: call($value)",
+        "answer_d": null,
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": true,
+        "answer_b": false,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 7
+    },
+    {
+      "id": 297,
+      "question": "In which programming language WordPress is written?",
+      "answers": {
+        "answer_a": "Java",
+        "answer_b": "Node",
+        "answer_c": "PHP",
+        "answer_d": "Javascript",
+        "answer_e": "VueJS",
+        "answer_f": "Python"
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": false,
+        "answer_c": true,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 7
+    },
+    {
+      "id": 267,
+      "question": "What is an action hook?",
+      "answers": {
+        "answer_a": "A hook that is triggered at a specific time when WordPress is running and lets you take an action.",
+        "answer_b": "A hook that is triggered at a specific time when WordPress is not running so it lets you take an action.",
+        "answer_c": null,
+        "answer_d": null,
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": true,
+        "answer_b": false,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 7
+    },
+    {
+      "id": 270,
+      "question": "What is a WordPress taxonomy?",
+      "answers": {
+        "answer_a": "In WordPress, a “taxonomy” is a grouping mechanism for some posts (or links or custom post types).",
+        "answer_b": "In WordPress, a “taxonomy” is a grouping mechanism for some plugins .",
+        "answer_c": "In WordPress, a “taxonomy” is a grouping mechanism for some pages .",
+        "answer_d": null,
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": true,
+        "answer_b": false,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 7
+    },
+    {
+      "id": 318,
+      "question": "What is a Widget?",
+      "answers": {
+        "answer_a": "WordPress Widgets add content and features to your Sidebars.",
+        "answer_b": "Widget is a vertical column provided by a theme for displaying information other than the main content of the web page.",
+        "answer_c": "Widget is a function of special software that allows feedreaders to access a site.",
+        "answer_d": "None of the mentioned",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": true,
+        "answer_b": false,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 7
+    },
+    {
+      "id": 285,
+      "question": "What is the correct syntax of the usermeta function in Wordpress?",
+      "answers": {
+        "answer_a": "get_user( int $user_id, string $key = '', bool $single = true )",
+        "answer_b": "get_user_meta( int $user_id, string $key = '', bool $single = false )",
+        "answer_c": "get_user_meta( int $user_id, string $key = '', bool $single = true )",
+        "answer_d": null,
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": true,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 7
+    },
+    {
+      "id": 275,
+      "question": "What are Importers in WordPress?",
+      "answers": {
+        "answer_a": "Importers are linking files that provide the functionality to export a bulk XML file with any number of records.",
+        "answer_b": "Importers are plugins that provide the functionality to import a bulk XML file with any number of records.",
+        "answer_c": null,
+        "answer_d": null,
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": true,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 7
+    },
+    {
+      "id": 277,
+      "question": "In WordPress, objects are passed by value or by reference.",
+      "answers": {
+        "answer_a": "In WordPress, all objects are passed by value.",
+        "answer_b": "In WordPress, all objects are passed by reference.",
+        "answer_c": null,
+        "answer_d": null,
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": true,
+        "answer_b": false,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 7
+    },
+    {
+      "id": 305,
+      "question": "What are categories in WordPress.",
+      "answers": {
+        "answer_a": "Categories allow a user to divide its content into different sections.",
+        "answer_b": "Categories allow a user to merge its content from different sections.",
+        "answer_c": "Categories allow a user to list out all the contents",
+        "answer_d": null,
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": true,
+        "answer_b": false,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 7
+    },
+    {
+      "id": 340,
+      "question": "Who developed WordPress?",
+      "answers": {
+        "answer_a": "WordPress was co-founded by Allen Mullenweg and Luke Little on the 27th of June 2003.",
+        "answer_b": "WordPress was co-founded by Matt Mullenweg and Mike Little on the 27th of May 2003.",
+        "answer_c": "WordPress was co-founded by Andrew Mclean and Mike Hathaway on the 24th of May 2003.",
+        "answer_d": null,
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": true,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 7
+    },
+    {
+      "id": 261,
+      "question": "What should one use for plugin development — custom post types or custom database tables?",
+      "answers": {
+        "answer_a": "custom post type",
+        "answer_b": "custom database tables",
+        "answer_c": "There is no specific preference for plugin development; it depends on what type of plugin’s one has to develop.",
+        "answer_d": null,
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": false,
+        "answer_c": true,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 7
+
+    },
+    {
+      "id": 281,
+      "question": "What is the function to get website url in wordpress?",
+      "answers": {
+        "answer_a": "get_website_url();",
+        "answer_b": "get_site_url();",
+        "answer_c": "get_url();",
+        "answer_d": null,
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": true,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 7
+    },
+    {
+      "id": 289,
+      "question": "How many types of plans are available in wordpress by default?",
+      "answers": {
+        "answer_a": "4",
+        "answer_b": "6",
+        "answer_c": "2",
+        "answer_d": "3",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": true,
+        "answer_b": false,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 7
+    },
+    {
+      "id": 324,
+      "question": "You have lost access to your admin area and can't recover it with email. What do you do?",
+      "answers": {
+        "answer_a": "Delete your themes folder.",
+        "answer_b": "Reinstall Wordpress.",
+        "answer_c": "Install a plugin to recover your password.",
+        "answer_d": "Add a new user with admin privileges in MySQL.",
+        "answer_e": "Reset the password of your user through MySQL.",
+        "answer_f": "Register a new user and set it as an administrator via your panel."
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": false,
+        "answer_c": false,
+        "answer_d": true,
+        "answer_e": true,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 7
+    },
+    {
+      "id": 298,
+      "question": "What is the difference between WordPress Posts and Pages?",
+      "answers": {
+        "answer_a": "There is no difference between Posts and Pages.",
+        "answer_b": "Posts are entries listed in reverse chronological order on the site homepage and Pages are static and are not listed by date.",
+        "answer_c": "Pages are entries listed in reverse chronological order on the site homepage and Posts are static and are not listed by date.",
+        "answer_d": "None of the above.",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": false,
+        "answer_b": false,
+        "answer_c": true,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 7
+    },
+    {
+      "id": 264,
+      "question": "Is it a good practice to edit the WordPress core files?",
+      "answers": {
+        "answer_a": "No, because your changes will be lost during the next WordPress update",
+        "answer_b": "Yes, you can change the core files without any further compilations",
+        "answer_c": null,
+        "answer_d": null,
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": true,
+        "answer_b": false,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 7
+    },
+    {
+      "id": 341,
+      "question": "What is the best way to change table prefix (wp_) before installation in WordPress?",
+      "answers": {
+        "answer_a": "Before Installation: In this way, you have to rename your wp_config.php file according to your need through $table_prefix=’wp_’;.",
+        "answer_b": "Before Installation: Through this way, you have to go PHPMyAdmin -> Select your database -> Check all tables -> Add/Update table prefix.",
+        "answer_c": "After Installation: Once you have the database, you can go ahead and change it",
+        "answer_d": null,
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": true,
+        "answer_b": false,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 7
+    },
+    {
+      "id": 260,
+      "question": "What are meta-tags?",
+      "answers": {
+        "answer_a": "Meta-tags are keywords and description used to display website or page information.",
+        "answer_b": "Meta-tags are codes and scripts used to display website or page information.",
+        "answer_c": "Meta-tags are special tages and function used to display website or page information.",
+        "answer_d": null,
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": false,
+      "correct_answers": {
+        "answer_a": true,
+        "answer_b": false,
+        "answer_c": false,
+        "answer_d": false,
+        "answer_e": false,
+        "answer_f": false
+      },
+      "correct_answer": "answer_a",
+      "categoryId": 7
     }
   ]
 }

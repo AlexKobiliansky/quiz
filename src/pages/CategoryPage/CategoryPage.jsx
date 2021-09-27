@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
 import {useSelector} from 'react-redux';
-//material-ui
+
 import {Typography} from '@material-ui/core';
-//components
+
 import QuestionBlock from '../../components/QuestionBlock/QuestionBlock';
 import NavigationBlock from '../../components/NavigationBlock/NavigationBlock';
-//styles
+
 import styles from './CategoryPage.module.sass'
 
 const initialCheckBoxValue = {
@@ -40,7 +40,7 @@ function CategoryPage() {
         gutterBottom
         variant="h2"
       >
-        Category: {!isLoading ? <b>{currentCategory.title}</b> : 'Идет загрузка'}
+        Category: {!isLoading ? <b>{currentCategory?.title}</b> : 'Идет загрузка'}
       </Typography>
 
       <div className={styles.quizWindow}>

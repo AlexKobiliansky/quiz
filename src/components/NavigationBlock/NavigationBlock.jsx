@@ -3,7 +3,7 @@ import {useDispatch, useSelector} from 'react-redux';
 import {useHistory, useParams} from 'react-router-dom';
 import ProgressBar from '@ramonak/react-progress-bar';
 import PropTypes from 'prop-types';
-//material-ui
+
 import {
   Button,
   Dialog,
@@ -15,10 +15,10 @@ import {
   withStyles
 } from '@material-ui/core';
 import {purple} from '@material-ui/core/colors';
-//actions
+
 import {setCurrentCategoryAC, setInProcess} from '../../redux/actions/category';
 import {fetchQuestionsAC, restartQuiz, setCurrentQuestion, submitAnswer} from '../../redux/actions/questions';
-//styles
+
 import styles from '../../pages/CategoryPage/CategoryPage.module.sass';
 
 const ColorButton = withStyles((theme) => ({
@@ -44,10 +44,36 @@ const NavigationBlock = ({resetAnswerVariants, userAnswers}) => {
   const history = useHistory()
   const dispatch = useDispatch();
   const categoryId = Number(useParams().id);
-  const {inProcess} = useSelector(({category}) => category);
+  const {inProcess, currentCategory} = useSelector(({category}) => category);
   const {questions, unansweredQuestions, answeredQuestions, currentQuestion} = useSelector(({questions}) => questions);
   const [questionNumber, setQuestionNumber] = useState(1);
-  const [openDialog, setOpenDialog] = React.useState(false);
+  const [openDialog, setOpenDialog] = useState(false);
+
+  const onRestartQuiz = async () => {
+    await dispatch(setCurrentCategoryAC(categoryId));
+    await dispatch(fetchQuestionsAC(categoryId));
+    dispatch(restartQuiz())
+  }
+
+  useLayoutEffect(() => {
+      onRestartQuiz();
+      return (() => dispatch(setInProcess(false)));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    questions.length && dispatch(setCurrentQuestion(unansweredQuestions[questionNumber - 1]));
+    console.log('question number: ', questionNumber-1);
+    resetAnswerVariants();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [questionNumber]);
+
+  useEffect(() => {
+    if (!currentCategory) {
+      history.push('/')
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentCategory])
 
   const handleOpenDialog = () => {
     setOpenDialog(true);
@@ -58,23 +84,6 @@ const NavigationBlock = ({resetAnswerVariants, userAnswers}) => {
   };
 
   let progress = Math.ceil(answeredQuestions.length / questions.length * 100);
-
-  const onRestartQuiz = async () => {
-    await dispatch(setCurrentCategoryAC(categoryId));
-    await dispatch(fetchQuestionsAC(categoryId));
-    dispatch(restartQuiz())
-  }
-
-  useLayoutEffect(() => {
-      onRestartQuiz();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  useEffect(() => {
-    questions.length && dispatch(setCurrentQuestion(unansweredQuestions[questionNumber - 1]));
-    resetAnswerVariants();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [questionNumber])
 
   const startQuiz = () => {
     dispatch(setInProcess(true))
@@ -105,9 +114,10 @@ const NavigationBlock = ({resetAnswerVariants, userAnswers}) => {
       endQuiz();
     }
 
-    if (questionNumber !== questions.length) {
+    if (questionNumber < unansweredQuestions.length) {
       dispatch(setCurrentQuestion(unansweredQuestions[questionNumber]))
     } else {
+      dispatch(setCurrentQuestion(unansweredQuestions[0]))
       setQuestionNumber(1)
     }
 
@@ -132,20 +142,16 @@ const NavigationBlock = ({resetAnswerVariants, userAnswers}) => {
 
                 <div className={styles.navButtons}>
                   {currentQuestion?.id !== unansweredQuestions[0]?.id
-                    ? (
-                      <Button color="primary" variant="outlined" onClick={prevQuestion}>
+                    ? <Button color="primary" variant="outlined" onClick={prevQuestion}>
                         Previous question
                       </Button>
-                    )
                     : null
                   }
 
                   {currentQuestion?.id !== unansweredQuestions[unansweredQuestions.length - 1]?.id
-                    ? (
-                      <Button color="primary" variant="outlined" onClick={nextQuestion}>
+                    ? <Button color="primary" variant="outlined" onClick={nextQuestion}>
                         Next question
                       </Button>
-                    )
                     : null
                   }
                 </div>
@@ -213,4 +219,4 @@ NavigationBlock.propTypes = {
   userAnswers: PropTypes.object
 }
 
-export default NavigationBlock;
+export default React.memo(NavigationBlock);

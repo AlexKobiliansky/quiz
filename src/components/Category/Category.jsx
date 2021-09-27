@@ -1,10 +1,10 @@
 import React from 'react';
-// third-party
+
 import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types';
-//images
+
 import imagePlaceholder from '../../assets/images/image-placeholder.jpg';
-//styles
+
 import styles from './Category.module.sass';
 
 
@@ -17,7 +17,7 @@ const Category = ({title, img, id, totalQuestions}) => {
         <img src={imgSrc} alt={title}/>
         <div className={styles.content}>
           <div className={styles.title}>{title}</div>
-          <div>{totalQuestions} Questions</div>
+          <div>{totalQuestions} {totalQuestions > 1 ? 'Questions' : 'Question'}</div>
         </div>
       </div>
     </Link>
@@ -31,4 +31,4 @@ Category.propTypes = {
   totalQuestions: PropTypes.number
 }
 
-export default Category;
+export default React.memo(Category);

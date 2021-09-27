@@ -18,6 +18,7 @@ export const setCurrentCategoryAC = id => async dispatch => {
     dispatch(setCurrentCategory(data))
   } catch(e) {
     alert(`Ошибка при загрузке категории: ${e.message}`);
+    dispatch(setCurrentCategory(null))
   }
 }
 

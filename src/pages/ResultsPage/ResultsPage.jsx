@@ -1,4 +1,4 @@
-import React, {useMemo} from 'react';
+import React from 'react';
 import {useSelector} from 'react-redux';
 import ProgressBar from '@ramonak/react-progress-bar';
 //material-ui
@@ -8,25 +8,18 @@ import ComparedAnswers from '../../components/ComparedAnswers/ComparedAnswers';
 import TitleSeparator from '../../components/UI/TitleSeparator/TitleSeparator';
 //styles
 import styles from './ResultsPage.module.sass';
-
-let countAnswers = (arr1, arr2) => {
-  let count = 0;
-  if (!arr2.length) return 0;
-
-  outer: for (let i = 0; i < arr1.length; i++) {
-    for (let key in arr1[i].answers) {
-      if ((!arr2[i].userAnswers[key]) || (arr1[i].correct_answers[key] !== arr2[i]?.userAnswers[key])) continue outer;
-    }
-    count += 1;
-  }
-  return count;
-}
+import {currentCategorySelector, timerSelector} from '../../redux/selectors/categorySelectors';
+import {
+  correctAnswersSelector,
+  questionsSelector
+} from '../../redux/selectors/questionsSelectors';
 
 const ResultsPage = () => {
-  const {currentCategory, timer} = useSelector(({category}) => category);
-  const {questions, answeredQuestions} = useSelector(({questions}) => questions);
+  const currentCategory = useSelector(currentCategorySelector);
+  const timer = useSelector(timerSelector);
+  const questions = useSelector(questionsSelector);
+  let correctAnswers = useSelector(correctAnswersSelector);
 
-  let correctAnswers = useMemo(() => countAnswers(questions, answeredQuestions), [questions, answeredQuestions]);
   let progress = Math.ceil(correctAnswers/questions?.length*100);
 
   return (

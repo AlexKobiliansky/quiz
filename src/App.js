@@ -7,6 +7,7 @@ import Main from './components/Main/Main'
 import Categories from './pages/CategoriesPage/CategoriesPage';
 import CategoryPage from './pages/CategoryPage/CategoryPage';
 import ResultsPage from './pages/ResultsPage/ResultsPage';
+import NoPage from './pages/NoPage/NoPage';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="/categories" component={Categories} exact/>
             <Route path="/categories/:id" component={CategoryPage} exact/>
             <Route path="/results" component={ResultsPage} exact/>
+            <Route component={NoPage}/>
           </Switch>
         </div>
       </div>

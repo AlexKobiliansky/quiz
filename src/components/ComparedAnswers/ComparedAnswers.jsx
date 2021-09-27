@@ -8,17 +8,11 @@ import CheckIcon from '@material-ui/icons/Check';
 import CloseIcon from '@material-ui/icons/Close';
 //styles
 import styles from './ComparedAnswers.module.sass';
-
-let compareAnswers = (obj1, obj2) => {
-  if (!obj2) return false;
-  for (let key in obj1.correct_answers) {
-    if (obj1.correct_answers[key] !== obj2.userAnswers[key]) return false;
-  }
-  return true;
-}
+import {compareAnswers} from '../../utils/compareAnswers';
+import {answeredQuestionsSelector} from '../../redux/selectors/questionsSelectors';
 
 const ComparedAnswers = ({question, index}) => {
-  const {answeredQuestions} = useSelector(({questions}) => questions);
+  const answeredQuestions = useSelector(answeredQuestionsSelector);
 
   let userAnswer = answeredQuestions.find(item => item.id === question.id);
   let resultComparsion = useMemo(() => compareAnswers(question, userAnswer), [question, userAnswer]);
