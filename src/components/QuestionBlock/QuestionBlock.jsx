@@ -2,9 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {useSelector} from 'react-redux';
 
-import {Skeleton} from '@material-ui/lab';
-import {makeStyles} from '@material-ui/core';
-
 import TitleSeparator from '../UI/TitleSeparator/TitleSeparator';
 import Timer from '../Timer/Timer';
 import MultipleAnswers from '../MultipleAnswers/MultipleAnswers';

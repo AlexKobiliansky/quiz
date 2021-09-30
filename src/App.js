@@ -8,6 +8,8 @@ import Categories from './pages/CategoriesPage/CategoriesPage';
 import CategoryPage from './pages/CategoryPage/CategoryPage';
 import ResultsPage from './pages/ResultsPage/ResultsPage';
 import NoPage from './pages/NoPage/NoPage';
+import SignupPage from './pages/SignupPage/SignupPage';
+import {routes} from './config/routes';
 
 function App() {
   return (
@@ -16,10 +18,11 @@ function App() {
       <div className="page-wrapper">
         <div className="container">
           <Switch>
-            <Route path="/" component={Main} exact/>
-            <Route path="/categories" component={Categories} exact/>
-            <Route path="/categories/:id" component={CategoryPage} exact/>
-            <Route path="/results" component={ResultsPage} exact/>
+            <Route path={routes.INDEX} component={Main} exact/>
+            <Route path={routes.CATEGORIES} component={Categories} exact/>
+            <Route path={routes.SINGLE_CATEGORY} component={CategoryPage} exact/>
+            <Route path={routes.RESULTS} component={ResultsPage} exact/>
+            <Route path={routes.SIGNUP} component={SignupPage} exact/>
             <Route component={NoPage}/>
           </Switch>
         </div>
