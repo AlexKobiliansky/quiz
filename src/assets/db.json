@@ -1,4 +1,30 @@
 {
+  "users": [
+    {
+      "name": "adad",
+      "email": "wwww@sdsd.com",
+      "password": "$2a$08$DIlcSPN8xJmnT1POqzEq3u2kT9qphDOhrQceIhXNM8q07o/nXFg2W",
+      "date": "2021-10-02T01:10:28.288Z",
+      "role": "customer",
+      "id": 1
+    },
+    {
+      "name": "test",
+      "email": "wwww1@sdsd.com",
+      "password": "$2a$08$t80eD6uxUiVfWZWJbzvQ2u5ODtZFhCMVAwp6l8VcWNWcP7yNpkasq",
+      "date": "2021-10-02T01:11:30.121Z",
+      "role": "customer",
+      "id": 2
+    },
+    {
+      "name": "sadasd",
+      "email": "wewe@ww.com",
+      "password": "$2a$08$.LzCQbS/ZF3IfYjejwKUu.sRrXuAwA5nTrMB7meu37mjRMeBkCcry",
+      "date": "2021-10-02T01:16:17.791Z",
+      "role": "customer",
+      "id": 3
+    }
+  ],
   "categories": [
     {
       "id": 1,
@@ -2634,7 +2660,6 @@
       },
       "correct_answer": "answer_a",
       "categoryId": 7
-
     },
     {
       "id": 281,

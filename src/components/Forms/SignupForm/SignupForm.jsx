@@ -1,14 +1,25 @@
 import React from 'react';
 import {Button, TextField, Typography} from '@material-ui/core';
-import CustomPasswordField from '../CustomPasswordField/CustomPasswordField';
-import {Link} from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
 import {Formik} from 'formik';
+import {useDispatch} from 'react-redux';
+import CustomPasswordField from '../CustomPasswordField/CustomPasswordField';
 import CustomFileField from '../CustomFileField/CustomFileField';
 import {signupValidationSchema} from '../../../utils/validations/signupValidationSchema'
+import {routes} from '../../../config/routes';
+import {loginAC, registerAC} from '../../../redux/actions/user';
+
 
 const SignupForm = () => {
-  let submitForm = async (values) => {
-    console.log(values)
+  const dispatch = useDispatch();
+  const history = useHistory();
+  let submitForm = async (user) => {
+    const registerSuccess = await registerAC(user);
+
+    if(registerSuccess) {
+      const candidate = await dispatch(loginAC(user.email, user.password));
+      candidate && history.push(routes.INDEX);
+    }
   }
 
   return (
@@ -33,9 +44,7 @@ const SignupForm = () => {
             touched,
             handleChange,
             handleBlur,
-            isValid,
             handleSubmit,
-            dirty,
           }) => (
           <form className="form">
             <Typography variant="h2" className="formTitle">Signup</Typography>
@@ -107,7 +116,7 @@ const SignupForm = () => {
             >
               Signup
             </Button>
-            <small>Already have an accaunt? login <Link to="/signin">here</Link></small>
+            <small>Already have an account? login <Link to={routes.SIGNIN}>here</Link></small>
           </form>
         )}
       </Formik>

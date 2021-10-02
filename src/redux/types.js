@@ -1,3 +1,8 @@
+// User
+export const SET_LOADING_USER = 'SET_LOADING_USER';
+export const SET_USER = "SET_USER";
+export const LOGOUT = "LOGOUT";
+
 // Category types
 export const SET_LOADING_CATEGORY = 'SET_LOADING_CATEGORY';
 export const SET_CATEGORIES = 'SET_CATEGORIES';
