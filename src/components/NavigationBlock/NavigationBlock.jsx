@@ -63,7 +63,6 @@ const NavigationBlock = ({resetAnswerVariants, userAnswers}) => {
 
   useEffect(() => {
     questions.length && dispatch(setCurrentQuestion(unansweredQuestions[questionNumber - 1]));
-    console.log('question number: ', questionNumber-1);
     resetAnswerVariants();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [questionNumber]);

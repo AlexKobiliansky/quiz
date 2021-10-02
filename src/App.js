@@ -11,6 +11,7 @@ import NoPage from './pages/NoPage/NoPage';
 import SignupPage from './pages/SignupPage/SignupPage';
 import {routes} from './config/routes';
 import SigninPage from './pages/SigninPage/SigninPage';
+import NoAuthRoute from './components/NoAuthRoute/NoAuthRoute';
 
 function App() {
   return (
@@ -23,8 +24,8 @@ function App() {
             <Route path={routes.CATEGORIES} component={Categories} exact/>
             <Route path={routes.SINGLE_CATEGORY} component={CategoryPage} exact/>
             <Route path={routes.RESULTS} component={ResultsPage} exact/>
-            <Route path={routes.SIGNUP} component={SignupPage} exact/>
-            <Route path={routes.SIGNIN} component={SigninPage} exact/>
+            <NoAuthRoute path={routes.SIGNUP} component={SignupPage} />
+            <NoAuthRoute path={routes.SIGNIN} component={SigninPage} />
             <Route component={NoPage}/>
           </Switch>
         </div>

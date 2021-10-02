@@ -38,7 +38,10 @@ const Timer = () => {
 
     dispatch(updateCategoryTimer(time))
 
-    return () => clearInterval(interv)
+    return () => {
+      clearInterval(interv);
+      setTime({});
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [inProcess]);
 
