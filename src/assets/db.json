@@ -1,28 +1,37 @@
 {
   "users": [
     {
-      "name": "adad",
-      "email": "wwww@sdsd.com",
+      "name": "superadmin",
+      "email": "alexko89@test.com",
       "password": "$2a$08$DIlcSPN8xJmnT1POqzEq3u2kT9qphDOhrQceIhXNM8q07o/nXFg2W",
       "date": "2021-10-02T01:10:28.288Z",
-      "role": "customer",
+      "role": "superadmin",
+      "img": "https://res.cloudinary.com/do1zs5utw/image/upload/v1631222510/javascript_s199nx.png",
       "id": 1
     },
     {
-      "name": "test",
-      "email": "wwww1@sdsd.com",
-      "password": "$2a$08$t80eD6uxUiVfWZWJbzvQ2u5ODtZFhCMVAwp6l8VcWNWcP7yNpkasq",
-      "date": "2021-10-02T01:11:30.121Z",
+      "name": "asdasdad",
+      "email": "weqwe@wewew.com",
+      "password": "$2a$08$QE/Noy7taWm3vynl8N.0he/5H60MZchr2rSWNKc1w6GT8oSEfpkSK",
+      "date": "2021-10-02T01:59:09.506Z",
       "role": "customer",
       "id": 2
     },
     {
-      "name": "sadasd",
-      "email": "wewe@ww.com",
-      "password": "$2a$08$.LzCQbS/ZF3IfYjejwKUu.sRrXuAwA5nTrMB7meu37mjRMeBkCcry",
-      "date": "2021-10-02T01:16:17.791Z",
+      "name": "asdasdad",
+      "email": "weqwe1@wewew.com",
+      "password": "$2a$08$67J.Ta3offcT7kcv/hLAvu51FcRxfb7Z9ZFiKb/En4VU11HV.yjve",
+      "date": "2021-10-02T02:01:55.686Z",
       "role": "customer",
       "id": 3
+    },
+    {
+      "name": "sadasd",
+      "email": "2323@wewe.com",
+      "password": "$2a$08$mXZ5kpEpRF7h4F5K6Pz6le7QbnNn2rFYTdWd4O49/3g0Ds/Vl6uw6",
+      "date": "2021-10-02T02:08:41.452Z",
+      "role": "customer",
+      "id": 4
     }
   ],
   "categories": [

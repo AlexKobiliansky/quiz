@@ -1,10 +1,9 @@
 import { instance } from "./index";
 
 export const userAPI = {
-  getUser(email=null, password=null) {
+  getUser(email=null) {
     return instance.get(`/users?${
-      email !== null ? `login=${email}` : ''}&${
-      password !== null ? `password=${password}` : ''}`)
+      email !== null ? `email=${email}` : ''}`)
   },
 
   addUser(user) {

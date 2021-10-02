@@ -4,33 +4,28 @@ import {Link, useHistory} from 'react-router-dom';
 import {Formik} from 'formik';
 import {useDispatch} from 'react-redux';
 import CustomPasswordField from '../CustomPasswordField/CustomPasswordField';
-import CustomFileField from '../CustomFileField/CustomFileField';
-import {signupValidationSchema} from '../../../utils/validations/signupValidationSchema'
+import {signinValidationSchema} from '../../../utils/validations/signinValidationSchema';
 import {routes} from '../../../config/routes';
-import {loginAC, registerAC} from '../../../redux/actions/user';
+import {loginAC} from '../../../redux/actions/user';
 import {Alert} from '@material-ui/lab';
 
-
-const SignupForm = () => {
+const SigninForm = () => {
   const dispatch = useDispatch();
   const history = useHistory();
   const [loading, setLoading] = useState(false);
   const [openAlert, setOpenAlert] = useState(false);
   const [alertInfo, setAlertInfo] = useState({severity: null, message: null});
 
-  let submitForm = async (user) => {
+  let submitForm = async (values) => {
     setLoading(true);
-    const registerSuccess = await registerAC(user);
+    const user = await dispatch(loginAC(values.email, values.password));
 
-    if(registerSuccess) {
-      if (registerSuccess.status === 'error') {
-        handleOpenAlert('error', registerSuccess.message);
-      } else {
-        const candidate = await dispatch(loginAC(user.email, user.password));
-        candidate && history.push(routes.INDEX);
-      }
+    if (user.status === 'error') {
+      handleOpenAlert('error', user.message);
+    } else {
+      user && history.push(routes.INDEX);
     }
-    setLoading(false)
+    setLoading(false);
   }
 
   const handleCloseAlert = (event, reason) => {
@@ -60,17 +55,14 @@ const SignupForm = () => {
 
       <Formik
         initialValues={{
-          name: '',
           email: '',
           password: '',
-          confirmPassword: '',
-          file: undefined
         }}
         validateOnBlur
         onSubmit={(values) => {
           submitForm(values)
         }}
-        validationSchema={signupValidationSchema}
+        validationSchema={signinValidationSchema}
       >
         {({
             values,
@@ -81,22 +73,8 @@ const SignupForm = () => {
             handleSubmit,
           }) => (
           <form className="form">
-            <Typography variant="h2" className="formTitle">Signup</Typography>
+            <Typography variant="h2" className="formTitle">Signin</Typography>
             <div className="form-labels-wrap">
-              <TextField
-                id="name"
-                name="name"
-                type="text"
-                label="Your name"
-                className="textField"
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value={values.name}
-                helperText={touched.name && errors.name}
-                error={!!(touched.name && errors.name)}
-                fullWidth
-              />
-
               <TextField
                 id="email"
                 name="email"
@@ -121,23 +99,6 @@ const SignupForm = () => {
                 helperText={touched.password && errors.password}
                 error={touched.password && errors.password}
               />
-
-              <CustomPasswordField
-                id="confirmPassword"
-                name="confirmPassword"
-                label="Confirm Password"
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value={values.confirmPassword}
-                helperText={touched.confirmPassword && errors.confirmPassword}
-                error={touched.confirmPassword && errors.confirmPassword}
-              />
-
-              <CustomFileField
-                name="file"
-                values={values.file}
-                errors={errors.file}
-              />
             </div>
 
             <Button
@@ -149,9 +110,9 @@ const SignupForm = () => {
               onClick={handleSubmit}
               disabled={loading}
             >
-              {loading ? 'Loading...' : 'Signup'}
+              {loading ? 'Loading...' : 'Signin'}
             </Button>
-            <small>Already have an account? login <Link to={routes.SIGNIN}>here</Link></small>
+            <small>Don't have an account? register <Link to={routes.SIGNUP}>here</Link></small>
           </form>
         )}
       </Formik>
@@ -159,4 +120,4 @@ const SignupForm = () => {
   );
 };
 
-export default SignupForm;
+export default SigninForm;

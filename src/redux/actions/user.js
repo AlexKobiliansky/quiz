@@ -8,13 +8,17 @@ export const registerAC = async (user) => {
   const candidate = await userAPI.getUser(user.email)
     .then(({data}) => data[0])
     .catch(() => {
-      alert('Проблемы при регистрации');
-      return false;
+      return {
+        status: 'error',
+        message: `Registration Problems`
+      }
     });
 
   if (candidate && candidate.email === user.email) {
-    alert(`Пользователь с такой почтой уже существует!`);
-    return false;
+    return {
+      status: 'error',
+      message: `A user with such a mail already exists!`
+    }
   } else {
     let imageUrl;
     if (user.file) {
@@ -30,11 +34,11 @@ export const registerAC = async (user) => {
       role: "customer"
     }
     await userAPI.addUser(newUser).catch(() => {
-      alert('Проблемы при регистрации');
-      return false;
+      return {
+        status: 'error',
+        message: `Registration Problems`
+      }
     });
-
-    alert('Регистрация успешна!')
     return true;
   }
 }
@@ -42,15 +46,20 @@ export const registerAC = async (user) => {
 export const loginAC = (email, password) => {
   return async dispatch => {
     try {
-      let hash = bcrypt.hashSync(password, 8)
       const user = await userAPI.getUser(email)
         .then(({data}) => data[0])
         .catch(() => {
-          alert('Проблемы при авторизации');
+          return {
+            status: 'error',
+            message: `Login Problems`
+          }
         });
 
-      if (!user || bcrypt.compareSync(user.password, hash)) {
-        alert(`Не совпадает пара Email-пароль. Проверьте вводимые данные и попробуйте снова`);
+      if (!user || !bcrypt.compareSync(password, user.password)) {
+        return {
+          status: 'error',
+          message: `Email-password pair does not match. Check your input and try again`
+        }
       } else {
         localStorage.setItem("userData", JSON.stringify(user));
         dispatch(setUser(user));

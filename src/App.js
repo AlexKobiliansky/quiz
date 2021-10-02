@@ -10,6 +10,7 @@ import ResultsPage from './pages/ResultsPage/ResultsPage';
 import NoPage from './pages/NoPage/NoPage';
 import SignupPage from './pages/SignupPage/SignupPage';
 import {routes} from './config/routes';
+import SigninPage from './pages/SigninPage/SigninPage';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path={routes.SINGLE_CATEGORY} component={CategoryPage} exact/>
             <Route path={routes.RESULTS} component={ResultsPage} exact/>
             <Route path={routes.SIGNUP} component={SignupPage} exact/>
+            <Route path={routes.SIGNIN} component={SigninPage} exact/>
             <Route component={NoPage}/>
           </Switch>
         </div>
