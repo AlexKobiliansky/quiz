@@ -6,6 +6,10 @@ export const userAPI = {
       email !== null ? `email=${email}` : ''}`)
   },
 
+  getUserById(id) {
+    return instance.get(`/users/${id}`);
+  },
+
   addUser(user) {
     return instance.post(`users`, user)
   }

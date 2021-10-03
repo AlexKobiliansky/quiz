@@ -1,10 +1,15 @@
 import React, {useState} from 'react';
-import {Avatar, Menu, MenuItem, MenuList} from '@material-ui/core';
+import {Avatar, Menu, MenuItem} from '@material-ui/core';
 import styles from './UserBadge.module.sass';
 import avatarPlaceholder from '../../assets/images/avatar-placeholder.png';
-import {Link} from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
+import {logoutAC} from '../../redux/actions/user';
+import {routes} from '../../config/routes';
+import {useDispatch} from 'react-redux';
 
 const UserBadge = ({user}) => {
+  const dispatch = useDispatch();
+  const history = useHistory();
   const [anchorEl, setAnchorEl] = useState(null);
 
   const openMenu = e => {
@@ -14,6 +19,12 @@ const UserBadge = ({user}) => {
   const closeMenu = () => {
     setAnchorEl(null);
   };
+
+  const handleLogout = () => {
+    closeMenu();
+    dispatch(logoutAC());
+    history.push(routes.INDEX);
+  }
   return (
     <>
       <div className={styles.badge} onClick={openMenu}>
@@ -26,18 +37,26 @@ const UserBadge = ({user}) => {
         id="simple-menu"
         anchorEl={anchorEl}
         getContentAnchorEl={null}
-        anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+        anchorOrigin={{vertical: "bottom", horizontal: "center"}}
         open={Boolean(anchorEl)}
         onClose={closeMenu}
         keepMounted
       >
-          <MenuItem>
-            <Link to={'/profile/id'}>Profile</Link>
-          </MenuItem>
-          <MenuItem>
-            <Link to={'/statistics/id'}>My account</Link>
-          </MenuItem>
-          <MenuItem onClick={closeMenu}>Logout</MenuItem>
+        <MenuItem
+          component={Link}
+          to={`/profile/${user.id}`}
+          onClick={closeMenu}
+        >
+          Edit profile
+        </MenuItem>
+        <MenuItem
+          component={Link}
+          to={`/statistics/${user.id}`}
+          onClick={closeMenu}
+        >
+          Statistics
+        </MenuItem>
+        <MenuItem onClick={handleLogout}>Logout</MenuItem>
       </Menu>
     </>
 

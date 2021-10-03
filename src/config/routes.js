@@ -4,5 +4,7 @@ export const routes = {
   SIGNUP: '/signup',
   CATEGORIES: '/categories',
   SINGLE_CATEGORY: '/categories/:id',
-  RESULTS: '/results'
+  RESULTS: '/results',
+  STATISTICS: '/statistics/:id',
+  PROFILE: '/profile/:id'
 }

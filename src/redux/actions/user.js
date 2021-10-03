@@ -1,8 +1,17 @@
-import {LOGOUT, SET_USER} from '../types';
+import {LOGOUT, SET_CURRENT_USER, SET_LOADING_USER, SET_USER} from '../types';
 import {userAPI} from '../../api/userAPI';
 import bcrypt from 'bcryptjs';
 import {uploadImage} from '../../api/uploadImage';
 
+
+export const fetchUserByIdAC = (userId) => async dispatch  => {
+  try {
+    dispatch(setLoadingUser(true));
+    userAPI.getUserById(userId).then(({data}) => dispatch(setUser(data)));
+  } catch(e) {
+    alert(e.message)
+  }
+};
 
 export const registerAC = async (user) => {
   const candidate = await userAPI.getUser(user.email)
@@ -62,7 +71,7 @@ export const loginAC = (email, password) => {
         }
       } else {
         localStorage.setItem("userData", JSON.stringify(user));
-        dispatch(setUser(user));
+        dispatch(setCurrentUser(user));
         return user;
       }
     } catch (e) {
@@ -71,6 +80,13 @@ export const loginAC = (email, password) => {
   }
 }
 
+export const logoutAC = () => dispatch => {
+  localStorage.removeItem('userData');
+  dispatch(logout());
+}
+
 // actions
+export const setCurrentUser = user => ({type: SET_CURRENT_USER, payload: user});
 export const setUser = user => ({type: SET_USER, payload: user});
+export const setLoadingUser = isLoading => ({type: SET_LOADING_USER, payload: isLoading});
 export const logout = () => ({type: LOGOUT});
