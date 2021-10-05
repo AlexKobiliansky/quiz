@@ -12,5 +12,9 @@ export const userAPI = {
 
   addUser(user) {
     return instance.post(`users`, user)
-  }
+  },
+
+  editUser(id, object) {
+    return instance.patch(`users/${id}`, object)
+  },
 }

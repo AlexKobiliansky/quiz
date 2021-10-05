@@ -27,14 +27,16 @@ const Header = () => {
   const isAuth = useSelector(isAuthSelector);
 
   return (
-    <AppBar position="static" className={classes.root}>
-      <Toolbar className={classes.toolbar}>
-        {!isAuth && <Button color="inherit" component={Link} to={routes.SIGNIN}>Login</Button>}
-        {!isAuth && <Button color="inherit" component={Link} to={routes.SIGNUP}>Registration</Button>}
-        <Button color="inherit" component={Link} to={routes.CATEGORIES}>Start Quiz</Button>
-      </Toolbar>
+    <AppBar position="static">
+      <div className={`container ${classes.root}`}>
+        <Toolbar className={classes.toolbar}>
+          {!isAuth && <Button color="inherit" component={Link} to={routes.SIGNIN}>Login</Button>}
+          {!isAuth && <Button color="inherit" component={Link} to={routes.SIGNUP}>Registration</Button>}
+          <Button color="inherit" component={Link} to={routes.CATEGORIES}>Start Quiz</Button>
+        </Toolbar>
 
-      {currentUser && <UserBadge user={currentUser}/>}
+        {currentUser && <UserBadge user={currentUser}/>}
+      </div>
     </AppBar>
   );
 };

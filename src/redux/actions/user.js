@@ -1,4 +1,4 @@
-import {LOGOUT, SET_CURRENT_USER, SET_LOADING_USER, SET_USER} from '../types';
+import {LOGOUT, SET_CURRENT_USER, SET_LOADING_USER, SET_USER, UPDATE_CURRENT_USER, UPDATE_USER} from '../types';
 import {userAPI} from '../../api/userAPI';
 import bcrypt from 'bcryptjs';
 import {uploadImage} from '../../api/uploadImage';
@@ -80,6 +80,21 @@ export const loginAC = (email, password) => {
   }
 }
 
+export const updateUserAC = (userId, obj) => async dispatch => {
+  try {
+    userAPI.editUser(userId, obj);
+    dispatch(updateUser(obj));
+  } catch(e) {
+    alert(`Problems during updating user ${e.message}`);
+  }
+}
+
+export const updateCurrentUserAC = (obj) => async dispatch => {
+  dispatch(updateCurrentUser(obj));
+  const user = JSON.parse(localStorage.getItem('userData'));
+  localStorage.setItem('userData', JSON.stringify({...user, [Object.keys(obj)[0]]: Object.values(obj)[0]}));
+}
+
 export const logoutAC = () => dispatch => {
   localStorage.removeItem('userData');
   dispatch(logout());
@@ -89,4 +104,6 @@ export const logoutAC = () => dispatch => {
 export const setCurrentUser = user => ({type: SET_CURRENT_USER, payload: user});
 export const setUser = user => ({type: SET_USER, payload: user});
 export const setLoadingUser = isLoading => ({type: SET_LOADING_USER, payload: isLoading});
+export const updateUser = obj => ({type: UPDATE_USER, payload: obj});
+export const updateCurrentUser = obj => ({type: UPDATE_CURRENT_USER, payload: obj});
 export const logout = () => ({type: LOGOUT});

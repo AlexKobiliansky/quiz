@@ -2,6 +2,8 @@
 export const SET_LOADING_USER = 'SET_LOADING_USER';
 export const SET_USER = "SET_USER";
 export const SET_CURRENT_USER = "SET_CURRENT_USER";
+export const UPDATE_USER= "UPDATE_USER";
+export const UPDATE_CURRENT_USER= "UPDATE_CURRENT_USER";
 export const LOGOUT = "LOGOUT";
 
 // Category types

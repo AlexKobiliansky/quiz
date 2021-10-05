@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {Avatar, Menu, MenuItem} from '@material-ui/core';
 import styles from './UserBadge.module.sass';
-import avatarPlaceholder from '../../assets/images/avatar-placeholder.png';
+import avatarPlaceholder from '../../assets/images/avatar-placeholder.jpg';
 import {Link, useHistory} from 'react-router-dom';
 import {logoutAC} from '../../redux/actions/user';
 import {routes} from '../../config/routes';

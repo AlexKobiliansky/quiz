@@ -1,4 +1,4 @@
-import {SET_LOADING_USER, SET_USER, SET_CURRENT_USER, LOGOUT} from "../types";
+import {SET_LOADING_USER, SET_USER, SET_CURRENT_USER, LOGOUT, UPDATE_USER, UPDATE_CURRENT_USER} from "../types";
 
 const defaultState = {
   isLoading: false,
@@ -21,6 +21,22 @@ export default function userReducer (state=defaultState, action) {
         ...state,
         user: action.payload,
         isLoading: false
+      }
+    case UPDATE_USER:
+      return {
+        ...state,
+        user: {
+          ...state.user,
+          [Object.keys(action.payload)[0]]: Object.values(action.payload)[0]
+        },
+      }
+    case UPDATE_CURRENT_USER:
+      return {
+        ...state,
+        currentUser: {
+          ...state.currentUser,
+          [Object.keys(action.payload)[0]]: Object.values(action.payload)[0]
+        },
       }
     case LOGOUT:
       return {
