@@ -3,7 +3,6 @@ import React, {useEffect, useState} from 'react';
 import {Route, Switch} from 'react-router-dom';
 
 import Header from './components/Header/Header';
-import Main from './components/Main/Main'
 import Categories from './pages/CategoriesPage/CategoriesPage';
 import CategoryPage from './pages/CategoryPage/CategoryPage';
 import ResultsPage from './pages/ResultsPage/ResultsPage';
@@ -16,6 +15,7 @@ import {useDispatch} from 'react-redux';
 import {setCurrentUser} from './redux/actions/user';
 import StatisticsPage from './pages/StatisticsPage/StatisticsPage';
 import ProfilePage from './pages/ProfilePage/ProfilePage';
+import IndexPage from './pages/IndexPage/IndexPage';
 
 function App() {
   const dispatch = useDispatch();
@@ -30,7 +30,7 @@ function App() {
       <div className="page-wrapper">
         <div className="container">
           <Switch>
-            <Route path={routes.INDEX} component={Main} exact/>
+            <Route path={routes.INDEX} component={IndexPage} exact/>
             <Route path={routes.CATEGORIES} component={Categories} exact/>
             <Route path={routes.SINGLE_CATEGORY} component={CategoryPage} exact/>
             <Route path={routes.RESULTS} component={ResultsPage} exact/>
