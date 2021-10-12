@@ -51,6 +51,13 @@ const UserBadge = ({user}) => {
         </MenuItem>
         <MenuItem
           component={Link}
+          to={`/profile/2`}
+          onClick={closeMenu}
+        >
+          Test link
+        </MenuItem>
+        <MenuItem
+          component={Link}
           to={`/statistics/${user.id}`}
           onClick={closeMenu}
         >

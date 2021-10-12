@@ -14,13 +14,13 @@ export default function userReducer (state=defaultState, action) {
         ...state,
         currentUser: action.payload,
         isAuth: true,
-        isLoading: false
+        // isLoading: false
       }
     case SET_USER:
       return {
         ...state,
         user: action.payload,
-        isLoading: false
+        // isLoading: false
       }
     case UPDATE_USER:
       return {

@@ -111,14 +111,13 @@ const ImgLabel = ({img, onEdit, onDelete}) => {
         </DialogActions>
       </Dialog>
     </>
-
   );
 };
 
 ImgLabel.propTypes = {
-  img: PropTypes.string.isRequired,
+  img: PropTypes.string,
   onEdit: PropTypes.func.isRequired,
-  onDelete: PropTypes.func.isRequired
+  onDelete: PropTypes.func.isRequired,
 }
 
 export default ImgLabel;

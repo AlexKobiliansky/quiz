@@ -7,7 +7,8 @@ import {uploadImage} from '../../api/uploadImage';
 export const fetchUserByIdAC = (userId) => async dispatch  => {
   try {
     dispatch(setLoadingUser(true));
-    userAPI.getUserById(userId).then(({data}) => dispatch(setUser(data)));
+    await userAPI.getUserById(userId).then(({data}) => dispatch(setUser(data)));
+    dispatch(setLoadingUser(false));
   } catch(e) {
     alert(e.message)
   }
