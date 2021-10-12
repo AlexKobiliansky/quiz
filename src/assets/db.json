@@ -1,20 +1,20 @@
 {
   "users": [
     {
-      "name": "superadminsadasdasd",
+      "name": "superadmin",
       "email": "alexko89@test.com",
-      "password": "$2a$08$DIlcSPN8xJmnT1POqzEq3u2kT9qphDOhrQceIhXNM8q07o/nXFg2W",
+      "password": "$2a$08$SjeAbwjTuAPbmmM7E6b2vOiFb9mUXC3FGjyZVEkGHHi4RilJI28vS",
       "date": "2021-10-02T01:10:28.288Z",
       "role": "superadmin",
       "img": "http://res.cloudinary.com/do1zs5utw/image/upload/v1633395993/xg2goshrspo2hxpl9osj.jpg",
       "id": 1
     },
     {
-      "name": "asdasdad",
+      "name": "asdasdadddd",
       "email": "weqwe@wewew.com",
       "password": "$2a$08$QE/Noy7taWm3vynl8N.0he/5H60MZchr2rSWNKc1w6GT8oSEfpkSK",
       "date": "2021-10-02T01:59:09.506Z",
-      "role": "customer",
+      "role": "admin",
       "id": 2
     },
     {

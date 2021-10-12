@@ -14,7 +14,7 @@ const useStyles = makeStyles({
   }
 })
 
-const CustomLabel = ({title, value, entity, onEdit, loading}) => {
+const CustomLabel = ({title, value, entity, onEdit, loading, editable}) => {
   const classes = useStyles();
   const [active, setActive] = useState(false);
   const [inputValue, setInputValue] = useState(value);
@@ -55,7 +55,7 @@ const CustomLabel = ({title, value, entity, onEdit, loading}) => {
               inputRef={input}
               fullWidth
             />
-            <EditIcon color="primary" onClick={activateEditMode} />
+            {editable && <EditIcon color="primary" onClick={activateEditMode}/>}
           </>
       }
     </div>
@@ -66,7 +66,9 @@ CustomLabel.propTypes = {
   title: PropTypes.string.isRequired,
   value: PropTypes.any,
   entity: PropTypes.string.isRequired,
-  onEdit: PropTypes.func
+  onEdit: PropTypes.func,
+  loading: PropTypes.bool,
+  editable: PropTypes.bool
 }
 
 export default CustomLabel;

@@ -5,6 +5,6 @@ export const routes = {
   CATEGORIES: '/categories',
   SINGLE_CATEGORY: '/categories/:id',
   RESULTS: '/results',
-  STATISTICS: '/statistics/:id',
+  STATISTICS: '/statistics/',
   PROFILE: '/profile/:id'
 }

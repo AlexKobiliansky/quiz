@@ -18,7 +18,7 @@ import {
 import IconButton from '@material-ui/core/IconButton';
 import {uploadImage} from '../../api/uploadImage';
 
-const ImgLabel = ({img, onEdit, onDelete}) => {
+const ImgLabel = ({img, onEdit, onDelete, editable}) => {
   const [file, setFile] = useState(img);
   const [loading, setLoading] = useState(false);
   const hiddenFileInput = useRef(null);
@@ -60,7 +60,7 @@ const ImgLabel = ({img, onEdit, onDelete}) => {
   return (
     <>
       <div className={`${styles.imgLabel} ${loading ? styles.loading : ''}`}>
-        <div className={styles.buttons}>
+        {editable && <div className={styles.buttons}>
           <input type="file" ref={hiddenFileInput} onChange={handleChange}/>
 
           <Tooltip
@@ -82,7 +82,7 @@ const ImgLabel = ({img, onEdit, onDelete}) => {
               <DeleteIcon color="primary"/>
             </IconButton>
           </Tooltip>}
-        </div>
+        </div>}
 
         {loading && <div className={styles.spinner}><CircularProgress/></div>}
 
@@ -118,6 +118,7 @@ ImgLabel.propTypes = {
   img: PropTypes.string,
   onEdit: PropTypes.func.isRequired,
   onDelete: PropTypes.func.isRequired,
+  editable: PropTypes.bool
 }
 
 export default ImgLabel;

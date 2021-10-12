@@ -85,8 +85,16 @@ export const updateUserAC = (userId, obj) => async dispatch => {
   try {
     userAPI.editUser(userId, obj);
     dispatch(updateUser(obj));
+    return {
+      status: 'success',
+      message: `User info updated successfully`
+    }
   } catch(e) {
     alert(`Problems during updating user ${e.message}`);
+    return {
+      status: 'error',
+      message: `Problems during updating user ${e.message}`
+    }
   }
 }
 
@@ -99,6 +107,30 @@ export const updateCurrentUserAC = (obj) => async dispatch => {
 export const logoutAC = () => dispatch => {
   localStorage.removeItem('userData');
   dispatch(logout());
+}
+
+export const checkUserPasswordAC = async (email, password) => {
+  try {
+    const user = await userAPI.getUser(email)
+      .then(({data}) => data[0])
+      .catch(() => {
+        return {
+          status: 'error',
+          message: `User not found`
+        }
+      });
+
+    if (!user || !bcrypt.compareSync(password, user.password)) {
+      return {
+        status: 'error',
+        message: `You entered wrong password! Please try again`
+      }
+    } else {
+      return user;
+    }
+  } catch (e) {
+    alert(e.response);
+  }
 }
 
 // actions

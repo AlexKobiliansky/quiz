@@ -34,7 +34,7 @@ function App() {
             <Route path={routes.CATEGORIES} component={Categories} exact/>
             <Route path={routes.SINGLE_CATEGORY} component={CategoryPage} exact/>
             <Route path={routes.RESULTS} component={ResultsPage} exact/>
-            <Route path={routes.STATISTICS} component={StatisticsPage} exact/>
+            <Route path={routes.STATISTICS} component={StatisticsPage} />
             <Route path={routes.PROFILE} component={ProfilePage} exact/>
             <NoAuthRoute path={routes.SIGNUP} component={SignupPage} />
             <NoAuthRoute path={routes.SIGNIN} component={SigninPage} />
