@@ -9,14 +9,14 @@ import {signupValidationSchema} from '../../../utils/validations/signupValidatio
 import {routes} from '../../../config/routes';
 import {loginAC, registerAC} from '../../../redux/actions/user';
 import {Alert} from '@material-ui/lab';
+import {useAlert} from '../../../hooks/useAlert';
 
 
 const SignupForm = () => {
   const dispatch = useDispatch();
   const history = useHistory();
   const [loading, setLoading] = useState(false);
-  const [openAlert, setOpenAlert] = useState(false);
-  const [alertInfo, setAlertInfo] = useState({severity: null, message: null});
+  const {openAlert, alertInfo, handleOpenAlert, handleCloseAlert} = useAlert();
 
   let submitForm = async (user) => {
     setLoading(true);
@@ -31,16 +31,6 @@ const SignupForm = () => {
       }
     }
     setLoading(false)
-  }
-
-  const handleCloseAlert = (event, reason) => {
-    if (reason === 'clickaway') return;
-    setOpenAlert(false);
-  };
-
-  const handleOpenAlert = (severity, message) => {
-    setAlertInfo({severity, message});
-    setOpenAlert(true);
   }
 
   return (

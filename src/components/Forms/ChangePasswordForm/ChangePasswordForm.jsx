@@ -8,13 +8,13 @@ import {useDispatch, useSelector} from 'react-redux';
 import {currentUserSelector} from '../../../redux/selectors/userSelectors';
 import {Alert} from '@material-ui/lab';
 import bcrypt from 'bcryptjs';
+import {useAlert} from '../../../hooks/useAlert';
 
-const ChangePasswordForm = () => {
+const ChangePasswordForm = ({setOpenDialog}) => {
   const [loading, setLoading] = useState(false);
   const dispatch = useDispatch();
   const currentUser = useSelector(currentUserSelector);
-  const [openAlert, setOpenAlert] = useState(false);
-  const [alertInfo, setAlertInfo] = useState({severity: null, message: null});
+  const {openAlert, alertInfo, handleOpenAlert, handleCloseAlert} = useAlert();
 
   let submitForm = async (values) => {
     setLoading(true);
@@ -22,25 +22,20 @@ const ChangePasswordForm = () => {
 
     if (user.status === 'error') {
       handleOpenAlert('error', user.message);
+      setLoading(false);
     } else {
       const result = await dispatch(updateUserAC(currentUser.id, {password: bcrypt.hashSync(values.newPassword, 8)}));
       if (result.status === 'error') {
         handleOpenAlert('error', result.message);
       } else {
         await handleOpenAlert('success', result.message);
+        setTimeout(() => {
+          handleCloseAlert();
+          setOpenDialog(false);
+          setLoading(false);
+        }, 2000);
       }
     }
-    setLoading(false);
-  }
-
-  const handleCloseAlert = (event, reason) => {
-    if (reason === 'clickaway') return;
-    setOpenAlert(false);
-  };
-
-  const handleOpenAlert = (severity, message) => {
-    setAlertInfo({severity, message});
-    setOpenAlert(true);
   }
 
   return (

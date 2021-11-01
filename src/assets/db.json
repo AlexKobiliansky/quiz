@@ -22,8 +22,8 @@
     {
       "name": "test3",
       "email": "test3@mail.com",
-      "password": "$2a$08$QU61dUa2/wXKdaz/Uw3y/OMw2N4fZb5d6tEozcv2I0iTtqdaXw2nq",
-      "img": null,
+      "password": "$2a$08$AK5QFTWRf0Z1OCZvzTRfG.8BGlvtA3BEbWGzNg8vVL/IohnMuU4gK",
+      "img": "http://res.cloudinary.com/do1zs5utw/image/upload/v1635784186/app-quiz/a7mwzqv83zymthc5zl6m.jpg",
       "date": "2021-11-01T09:59:01.362Z",
       "role": "customer",
       "id": 6

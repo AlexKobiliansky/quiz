@@ -8,13 +8,13 @@ import {signinValidationSchema} from '../../../utils/validations/signinValidatio
 import {routes} from '../../../config/routes';
 import {loginAC} from '../../../redux/actions/user';
 import {Alert} from '@material-ui/lab';
+import {useAlert} from '../../../hooks/useAlert';
 
 const SigninForm = () => {
   const dispatch = useDispatch();
   const history = useHistory();
   const [loading, setLoading] = useState(false);
-  const [openAlert, setOpenAlert] = useState(false);
-  const [alertInfo, setAlertInfo] = useState({severity: null, message: null});
+  const {openAlert, alertInfo, handleOpenAlert, handleCloseAlert} = useAlert();
 
   let submitForm = async (values) => {
     setLoading(true);
@@ -26,16 +26,6 @@ const SigninForm = () => {
       user && history.push(routes.INDEX);
     }
     setLoading(false);
-  }
-
-  const handleCloseAlert = (event, reason) => {
-    if (reason === 'clickaway') return;
-    setOpenAlert(false);
-  };
-
-  const handleOpenAlert = (severity, message) => {
-    setAlertInfo({severity, message});
-    setOpenAlert(true);
   }
 
   return (
