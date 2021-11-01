@@ -39,7 +39,7 @@ export const registerAC = async (user) => {
       name: user.name,
       email: user.email,
       password: bcrypt.hashSync(user.password, 8),
-      imageUrl,
+      img: imageUrl,
       date: new Date(),
       role: "customer"
     }

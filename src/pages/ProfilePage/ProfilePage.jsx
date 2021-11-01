@@ -118,7 +118,7 @@ const ProfilePage = () => {
               ? <Skeleton variant="rect" width='100%' height={310} />
               : <>
                   <ImgLabel
-                    img={user?.imageUrl}
+                    img={user?.img}
                     onEdit={onEditImg}
                     onDelete={onDeleteImg}
                     editable={id === currentUser?.id}

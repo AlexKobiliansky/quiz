@@ -10,37 +10,23 @@
       "id": 1
     },
     {
-      "name": "asdasdadddd",
-      "email": "weqwe@wewew.com",
-      "password": "$2a$08$QE/Noy7taWm3vynl8N.0he/5H60MZchr2rSWNKc1w6GT8oSEfpkSK",
-      "date": "2021-10-02T01:59:09.506Z",
-      "role": "admin",
-      "id": 2
-    },
-    {
-      "name": "asdasdad",
-      "email": "weqwe1@wewew.com",
-      "password": "$2a$08$67J.Ta3offcT7kcv/hLAvu51FcRxfb7Z9ZFiKb/En4VU11HV.yjve",
-      "date": "2021-10-02T02:01:55.686Z",
-      "role": "customer",
-      "id": 3
-    },
-    {
-      "name": "sadasd",
-      "email": "2323@wewe.com",
-      "password": "$2a$08$mXZ5kpEpRF7h4F5K6Pz6le7QbnNn2rFYTdWd4O49/3g0Ds/Vl6uw6",
-      "date": "2021-10-02T02:08:41.452Z",
-      "role": "customer",
-      "id": 4
-    },
-    {
       "name": "test images deleting",
       "email": "testimages@test.com",
       "password": "$2a$08$LwWk5RbnjO3NHc4.4armfOqE.GUd3QjLTQ8ua0KxyI.MDx06xDnba",
       "imageUrl": "http://res.cloudinary.com/do1zs5utw/image/upload/v1635755536/eoonxauijoekjjeoo3ct.jpg",
       "date": "2021-11-01T08:32:17.435Z",
       "role": "customer",
-      "id": 5
+      "id": 5,
+      "img": "http://res.cloudinary.com/do1zs5utw/image/upload/v1635758865/app-quiz/rhsdoqr3euqpzd3a12qc.jpg"
+    },
+    {
+      "name": "test3",
+      "email": "test3@mail.com",
+      "password": "$2a$08$QU61dUa2/wXKdaz/Uw3y/OMw2N4fZb5d6tEozcv2I0iTtqdaXw2nq",
+      "img": null,
+      "date": "2021-11-01T09:59:01.362Z",
+      "role": "customer",
+      "id": 6
     }
   ],
   "categories": [
