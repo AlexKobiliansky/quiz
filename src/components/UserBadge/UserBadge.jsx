@@ -28,7 +28,7 @@ const UserBadge = ({user}) => {
   return (
     <>
       <div className={styles.badge} onClick={openMenu}>
-        <Avatar alt="Remy Sharp" src={user?.img ? user.img : avatarPlaceholder} />
+        <Avatar alt="Remy Sharp" src={user?.imageUrl ? user.imageUrl : avatarPlaceholder} />
 
         <div className={styles.triangle} />
       </div>
